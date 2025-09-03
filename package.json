@@ -1,0 +1,41 @@
+{
+  "name": "nessa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "format:check": "prettier . --check",
+    "format:fix": "prettier . --fix",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "Manish",
+  "license": "ISC",
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "npm run lint:fix",
+      "npm run format:fix"
+    ]
+  },
+  "description": "",
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@eslint/js": "^9.16.0",
+    "eslint": "^9.16.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.13.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11",
+    "prettier": "3.4.2"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^6.3.1",
+    "date-fns": "^4.1.0",
+    "react-helmet": "^6.1.0"
+  }
+}

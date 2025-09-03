@@ -1,0 +1,4 @@
+curl -X POST http://localhost:5000/v1/add-product \
+  -H "Content-Type: application/json" \
+  -d '{"name":"manish","description":"ssds","slug":"manish","categories":"Smart Lighting Solutions","subcategories":"AC Smart Street Light","specification":{"manish":"manish"},"feature":{"highlighted":["ok bro"],"useCases":[{"title":"","description":"","imageUrl":null}]},"productImageUrl":["https://ik.imagekit.io/osu3dgofo/productimageurl/1738529911309-image__23__mBuXj3K7h.png"],"brochureUrl":null,"applicationImageUrls":["https://ik.imagekit.io/osu3dgofo/applicationimageurls/1738529918206-image__22__5KnVM7h3O.png"],"bestSuitedFor":["Bank"],
+  "SKUId":"manish"}'

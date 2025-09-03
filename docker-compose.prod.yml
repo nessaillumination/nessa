@@ -1,0 +1,83 @@
+version: '3.9'
+
+services:
+  # mongo:
+  #   container_name: mongo_container
+  #   image: mongo:latest
+  #   volumes:
+  #     - mongo-data:/data/db
+  #   networks:
+  #     - queue-net
+  #   env_file:
+  #     - ./.env.production
+  #   command: mongod --bind_ip_all
+  #   restart: always
+
+  client:
+    container_name: client
+    build:
+      context: ./client
+      dockerfile: docker/production/Dockerfile
+    restart: always
+    env_file:
+      - ./.env.production
+    ports:
+      - 5173:80
+    depends_on:
+      - server
+    networks:
+      - queue-net
+
+  server:
+    container_name: server
+    build:
+      context: ./server
+      dockerfile: docker/production/Dockerfile
+    env_file:
+      - ./.env.production
+    ports:
+      - '5000:5000'
+    networks:
+      - queue-net
+
+  admin:
+    container_name: admin
+    build:
+      context: ./admin
+      dockerfile: docker/production/Dockerfile
+    restart: always
+    env_file:
+      - ./.env.production
+    ports:
+      - 8080:80
+    depends_on:
+      - server
+    networks:
+      - queue-net
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    container_name: nginx
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - /etc/letsencrypt/live/www.nessa.in/fullchain.pem:/etc/letsencrypt/live/www.nessa.in/fullchain.pem:ro
+      - /etc/letsencrypt/live/www.nessa.in/privkey.pem:/etc/letsencrypt/live/www.nessa.in/privkey.pem:ro
+    restart: always
+    networks:
+      - queue-net
+    depends_on:
+      - server
+      - client
+      - admin
+
+networks:
+  queue-net:
+    driver: bridge
+
+volumes:
+  mongo-data:
