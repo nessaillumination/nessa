@@ -4,7 +4,7 @@ import nigeriaFlag from '../../assets/images/homepageimages/nigeria.png';
 import zambiaFlag from '../../assets/images/homepageimages/zambia.png';
 import ugandaFlag from '../../assets/images/homepageimages/uganda.png';
 import israelFlag from '../../assets/images/homepageimages/israel.png';
-import omanFlag from '../../assets/images/homepageimages/Oman.png';
+import omanFlag from '../../assets/images/homepageimages/oman.png';
 import bangladeshFlag from '../../assets/images/homepageimages/bangladesh.png';
 import ethiopiaFlag from '../../assets/images/homepageimages/ethiopia.png';
 import ghanaFlag from '../../assets/images/homepageimages/ghana.png';
