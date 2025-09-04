@@ -125,7 +125,7 @@ const App = () => {
     };
 
     // Set document title
-    document.title = meta.title;
+    document.title = meta.ogTitle;
 
     // Set meta description
     let metaDescription = document.querySelector('meta[name="description"]');
