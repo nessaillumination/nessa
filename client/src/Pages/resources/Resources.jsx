@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react'
 import { resourcesUtilsConfigHardCodedData } from './ResourcesConfig'
 import toast from 'react-hot-toast'
 import ResourcesInsights from './ResourcesInsights'
+import SEO from '../../helper/Seo'
 
 export const Resources = () => {
     const [loading, setloading] = useState(true)
@@ -23,6 +24,13 @@ export const Resources = () => {
     }
 
     return (
+        <>
+        <SEO
+             title={"LED & Solar Lighting Case Studies | Lighting Design Resources | Nessa"} 
+             ogTitle={"LED & Solar Lighting Case Studies | Lighting Design Resources | Nessa"} 
+             description={"Explore LED and solar lighting case studies, energy-efficient lighting guides, and industrial lighting design resources to enhance your next lighting project efficiently."}
+             primaryKeyword={["led lighting case studies","lighting design resources","solar lighting case studies","energy efficient lighting guides","industrial lighting resources"]}
+        />
         <div className="w-full overflow-hidden">
             <Navbar />
             <SideComponent />
@@ -147,5 +155,6 @@ export const Resources = () => {
 
             <Footer />
         </div>
+        </>
     )
 }

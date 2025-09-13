@@ -113,52 +113,52 @@ const pageMetaData = {
   }
 
 const App = () => {
-  const location = useLocation();
+  // const location = useLocation();
 
-  useEffect(() => {
-    // Get meta data for the current route
-    const meta = pageMetaData[location.pathname] || {
-      title: 'Nessa',
-      ogTitle: 'Nessa: Innovative Lighting and Solar Solutions',
-      description: 'Nessa - Innovative solutions for a better future.',
-      keywords: 'Nessa, solutions, technology',
-    };
+  // useEffect(() => {
+  //   // Get meta data for the current route
+  //   const meta = pageMetaData[location.pathname] || {
+  //     title: 'Nessa',
+  //     ogTitle: 'Nessa: Innovative Lighting and Solar Solutions',
+  //     description: 'Nessa - Innovative solutions for a better future.',
+  //     keywords: 'Nessa, solutions, technology',
+  //   };
 
-    // Set document title
-    document.title = meta.ogTitle;
+  //   // Set document title
+  //   document.title = meta.ogTitle;
 
-    // Set meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.name = 'description';
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.content = meta.description;
+  //   // Set meta description
+  //   let metaDescription = document.querySelector('meta[name="description"]');
+  //   if (!metaDescription) {
+  //     metaDescription = document.createElement('meta');
+  //     metaDescription.name = 'description';
+  //     document.head.appendChild(metaDescription);
+  //   }
+  //   metaDescription.content = meta.description;
 
-    // Set meta keywords
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.name = 'keywords';
-      document.head.appendChild(metaKeywords);
-    }
-    metaKeywords.content = meta.keywords;
+  //   // Set meta keywords
+  //   let metaKeywords = document.querySelector('meta[name="keywords"]');
+  //   if (!metaKeywords) {
+  //     metaKeywords = document.createElement('meta');
+  //     metaKeywords.name = 'keywords';
+  //     document.head.appendChild(metaKeywords);
+  //   }
+  //   metaKeywords.content = meta.keywords;
 
-    // Set Open Graph title
-    let ogTitle = document.querySelector('meta[property="og:title"]');
-    if (!ogTitle) {
-      ogTitle = document.createElement('meta');
-      ogTitle.setAttribute('property', 'og:title');
-      document.head.appendChild(ogTitle);
-    }
-    ogTitle.content = meta.ogTitle;
+  //   // Set Open Graph title
+  //   let ogTitle = document.querySelector('meta[property="og:title"]');
+  //   if (!ogTitle) {
+  //     ogTitle = document.createElement('meta');
+  //     ogTitle.setAttribute('property', 'og:title');
+  //     document.head.appendChild(ogTitle);
+  //   }
+  //   ogTitle.content = meta.ogTitle;
 
-    // Cleanup (optional)
-    return () => {
-      // Reset to default or leave as is
-    };
-  }, [location.pathname]); // Run when the pathname changes
+  //   // Cleanup (optional)
+  //   return () => {
+  //     // Reset to default or leave as is
+  //   };
+  // }, [location.pathname]); // Run when the pathname changes
 
   if (MAINTENANCE_MODE) {
     return (
