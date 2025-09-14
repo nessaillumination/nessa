@@ -18,7 +18,7 @@ import Footer from '../../Components/Footer';
 import Marque from './homepageinnersections/Marque';
 import ImageSection from './homepageinnersections/ImageSection';
 import PartnersReviewsSwiper from '../../Components/partnerreviews/PartnersReviewsSwiper';
-import SEO from '../../helper/SEO';
+import SEO from '../../helper/Seo';
 import toast from 'react-hot-toast';
 
 
