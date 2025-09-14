@@ -6,7 +6,9 @@ import { vitePrerenderPlugin } from 'vite-prerender-plugin';
 export default defineConfig({
   plugins: [react(),
     vitePrerenderPlugin({
+      entry:"/src/main.jsx",
       routes: ["/", "/contactus", "/support", "/resources", "/privacy", "/terms", "/solutions", "/allproducts", "/valueAddedServices", "/support", "/aboutus", "/privacy", "/projects", "/cookiespolicy", "/esgpolicy"], // add all SEO-important pages
+
     }),
   ],
   server: {
