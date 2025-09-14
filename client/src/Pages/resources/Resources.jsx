@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react'
 import { resourcesUtilsConfigHardCodedData } from './ResourcesConfig'
 import toast from 'react-hot-toast'
 import ResourcesInsights from './ResourcesInsights'
-import SEO from '../../helper/Seo'
+import SEO from '../../helper/SEO'
 
 export const Resources = () => {
     const [loading, setloading] = useState(true)
