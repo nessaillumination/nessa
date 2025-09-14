@@ -8,6 +8,7 @@ import SideComponent from '../../Components/sideComponent/SideComponent'
 import Footer from '../../Components/Footer'
 import { fetchProjectsData } from '../../services/api.services'
 import toast from 'react-hot-toast'
+import SEO from '../../helper/Seo'
 
 export const Projects = () => {
     const [loading, setloading] = useState(true)
@@ -74,6 +75,13 @@ export const Projects = () => {
         )
     }
     return (
+        <>
+        <SEO
+        title={"LED & Solar Lighting Projects | Industrial & Outdoor Lighting | Nessa"}
+        ogTitle={"LED & Solar Lighting Projects | Industrial & Outdoor Lighting | Nessa"}
+        description={"Explore Nessa’s LED and solar lighting projects, including industrial, outdoor, and lighting installation projects showcasing energy-efficient solutions across India."}
+        primaryKeyword={["led lighting projects","solar lighting projects","lighting installation projects","industrial lighting projects","outdoor lighting projects"]}
+        />
         <div className="w-full overflow-hidden">
             <Navbar />
             <SideComponent />
@@ -171,5 +179,6 @@ export const Projects = () => {
 
             <Footer />
         </div>
+        </>
     )
 }

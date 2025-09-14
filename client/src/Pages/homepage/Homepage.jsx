@@ -18,6 +18,8 @@ import Footer from '../../Components/Footer';
 import Marque from './homepageinnersections/Marque';
 import ImageSection from './homepageinnersections/ImageSection';
 import PartnersReviewsSwiper from '../../Components/partnerreviews/PartnersReviewsSwiper';
+import SEO from '../../helper/Seo';
+import toast from 'react-hot-toast';
 
 
 const Homepage = () => {
@@ -115,6 +117,17 @@ const Homepage = () => {
     }
 
     return (
+        <>
+        {/* ----------meta data for seo ------------ */}
+        <SEO 
+            title= 'Nessa: Innovative Lighting and Solar Solutions'
+            ogTitle= 'Nessa: Innovative Lighting and Solar Solutions'
+            description= 'Nessa, a leading LED light manufacturer in India, offers smart lighting and solar high mast solutions for industrial, commercial, and smart city projects.' 
+            primaryKeyword={["Led Light Manufacturers India","Led Lighting Companies in India","Solar HighMast Manufacturer","Smart light manufacturer","Solar high mast lights"]}
+        />
+
+        {/* ----------meta data for seo ------------ */}
+
         <div className="w-full  overflow-hidden">
             <Navbar />
             <SideComponent />
@@ -167,7 +180,7 @@ const Homepage = () => {
                 </div>
 
                 <p className="text-xl px-[5vw] mb-8">
-                    At Nessa, we don't just offer off-the-shelf products; we design and manufacture lighting solutions that adapt precisely to your
+                    At Nessa, we dont just offer off-the-shelf products; we design and manufacture lighting solutions that adapt precisely to your
                     unique requirements. From extreme environments in mining and refineries to specific needs in airports and rural settings, our
                     expert team customizes each solution to solve the exact challenges you face.
                 </p>
@@ -355,6 +368,7 @@ const Homepage = () => {
 
             <Footer />
         </div>
+        </>
     )
 }
 

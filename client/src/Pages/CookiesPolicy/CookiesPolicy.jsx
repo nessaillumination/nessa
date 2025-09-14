@@ -1,6 +1,7 @@
 import Footer from '../../Components/Footer'
 import Navbar from '../../Components/Header/Navbar'
 import SideComponent from '../../Components/sideComponent/SideComponent'
+import SEO from '../../helper/Seo'
 import { cookiePolicyConfig } from './cookieConfig'
 
 const CookiesPolicy = () => {
@@ -24,30 +25,37 @@ const CookiesPolicy = () => {
   }
 
   return (
-    <div className="overflow-hidden bg-white">
-      <Navbar />
-      <SideComponent />
-      
-      <div className="bg-blue-200 text-black py-20"> 
-        <h1 className="text-2xl font-semibold text-center">{cookiePolicyConfig.title}</h1>
-      </div>
+    <>
+      <SEO
+        title={"Cookies Policy | Website Cookie Consent & GDPR Policy | Nessa"}
+        ogTitle={"Cookies Policy | Website Cookie Consent & GDPR Policy | Nessa"}
+        description={"Read Nessa’s cookies policy to understand our website cookie practices, consent requirements, and GDPR compliance for a secure and transparent browsing experience."}
+        primaryKeyword={["cookies policy", "cookie policy for website", "website cookie policy", "cookie consent policy", "gdpr cookie policy"]}
+      />
+      <div className="overflow-hidden bg-white">
+        <Navbar />
+        <SideComponent />
 
-      <div className="max-w-[1200px] mx-auto px-8 py-12">
-        {cookiePolicyConfig.sections.map((section) => (
-          <section key={section.id} className="mb-10">
-            <h2 className="text-lg font-semibold bg-gray-100 p-3 mb-4">
-              {section.title}
-            </h2>
-            <div className="pl-1">
-              {formatContent(section.content)}
-            </div>
-          </section>
-        ))}
-      </div>
+        <div className="bg-blue-200 text-black py-20">
+          <h1 className="text-2xl font-semibold text-center">{cookiePolicyConfig.title}</h1>
+        </div>
 
-      <Footer/>
-    </div>
-  )
+        <div className="max-w-[1200px] mx-auto px-8 py-12">
+          {cookiePolicyConfig.sections.map((section) => (
+            <section key={section.id} className="mb-10">
+              <h2 className="text-lg font-semibold bg-gray-100 p-3 mb-4">
+                {section.title}
+              </h2>
+              <div className="pl-1">
+                {formatContent(section.content)}
+              </div>
+            </section>
+          ))}
+        </div>
+
+        <Footer />
+      </div>
+    </>)
 }
 
 export default CookiesPolicy
