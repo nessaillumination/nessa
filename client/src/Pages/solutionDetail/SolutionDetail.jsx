@@ -8,11 +8,15 @@ import toast from 'react-hot-toast'
 import Footer from '../../Components/Footer'
 import { caseStudiesHardCodedData } from './SolutionDetailConfing'
 import { SolutionHero } from './SolutionHero'
+import SEO, { seoPathForDynamicPages } from '../../helper/Seo'
 
 const SolutionDetail = () => {
-    const { id } = useParams()
+    const { id ,title} = useParams()
     const [loading, setloading] = useState(true)
     const [solution, setsolution] = useState([])
+    const matchedKey = title.toLowerCase().split("-").join("").split("&").join("").split(",").join("")
+    const currentPageSeoContent = seoPathForDynamicPages[matchedKey] 
+    console.log("current page seo content ",title.toLowerCase().split("-").join("").split("&").join("").split(",").join(""))
 
     const [caseStudiesData, setCaseStudiesData] = useState([])
 
@@ -57,6 +61,12 @@ const SolutionDetail = () => {
     }
 
     return (
+        <>
+        <SEO 
+        title={currentPageSeoContent?.title}
+         ogTitle={currentPageSeoContent?.title} 
+         description={currentPageSeoContent?.description} 
+         primaryKeyword={currentPageSeoContent?.keywords}/>
         <div className="w-full overflow-hidden">
             <Navbar />
             <SideComponent />
@@ -159,6 +169,7 @@ const SolutionDetail = () => {
             <PartnersReviewsSwiper />
             <Footer />
         </div>
+    </>
     )
 }
 
