@@ -6,6 +6,7 @@ import Navbar from '../../Components/Header/Navbar'
 import SideComponent from '../../Components/sideComponent/SideComponent'
 import toast from 'react-hot-toast'
 import Footer from '../../Components/Footer'
+import SEO from '../../helper/Seo'
 
 const BlogDetailPage = () => {
     const { id } = useParams()
@@ -13,6 +14,7 @@ const BlogDetailPage = () => {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
     const [tableOfContents, setTableOfContents] = useState([])
+    const metaTags = blog?.tag ? blog.tag.split('-').map(tag => tag.trim()) : []
 
     const extractTableOfContents = (content) => {
         const parser = new DOMParser()
@@ -72,8 +74,11 @@ const BlogDetailPage = () => {
 
     if (loading) return <div className="flex justify-center items-center h-screen">Loading blog details...</div>
     if (error) return <div className="text-red-500 text-center mt-10">Error loading blog: {error.message}</div>
+    console.log(blog);
 
     return (
+        <>
+        <SEO title={blog.title} ogTitle={blog.title} description={blog.description} primaryKeyword={metaTags} />
         <div className="w-full overflow-hidden">
             <Navbar />
             <SideComponent />
@@ -154,6 +159,7 @@ const BlogDetailPage = () => {
 
             <Footer/>
         </div>
+      </>
     )
 }
 
