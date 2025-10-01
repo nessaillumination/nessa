@@ -11,7 +11,7 @@ const SEO = ({
   const location = useLocation();
   const canonicalUrl = `${window.location.origin}${location.pathname}`;
 
-  const allKeywords = [primaryKeyword, ...secondaryKeywords].join(", ");
+  const allKeywords = [...primaryKeyword, ...secondaryKeywords].join(", ");
 
   return (
     <Helmet>

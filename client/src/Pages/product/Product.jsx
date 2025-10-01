@@ -107,7 +107,7 @@ const Product = () => {
 
     return (
        <>
-            <SEO title={seoPathForDynamicPages[slug]?.title} description={seoPathForDynamicPages[slug]?.description} primaryKeyword={seoPathForDynamicPages[slug]?.keyword}/>
+            <SEO title={seoPathForDynamicPages[slug]?.title} description={seoPathForDynamicPages[slug]?.description} primaryKeyword={seoPathForDynamicPages[slug]?.keywords}/>
             <div className="overflow-hidden text-lg">
             <Navbar />
             <SideComponent />
