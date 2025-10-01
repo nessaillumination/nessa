@@ -10,13 +10,16 @@ import ShareButton from '../../Components/ShareButton'
 import Footer from '../../Components/Footer'
 import { Link } from 'react-router-dom'
 import ImageViewer from './ZoomableImage'
+import SEO, { seoPathForDynamicPages } from '../../helper/Seo'
 
 const Product = () => {
     const { id } = useParams()
+    let slug=`slug${id}`
     const [selectedImage, setSelectedImage] = useState(0)
     const [loading, setLoading] = useState(true)
     const [loadingEnquire, setLoadingEnquire] = useState(null)
     const [product, setproduct] = useState(null)
+    console.log("obje",seoPathForDynamicPages[slug]?.title,slug)
 
     useEffect(() => {
         const fetchData = async () => {
@@ -103,7 +106,9 @@ const Product = () => {
     }
 
     return (
-        <div className="overflow-hidden text-lg">
+       <>
+            <SEO title={seoPathForDynamicPages[slug]?.title} description={seoPathForDynamicPages[slug]?.description} primaryKeyword={seoPathForDynamicPages[slug]?.keyword}/>
+            <div className="overflow-hidden text-lg">
             <Navbar />
             <SideComponent />
 
@@ -219,7 +224,8 @@ const Product = () => {
             </div>
 
             <Footer />
-        </div>
+            </div>
+        </>
     )
 }
 
