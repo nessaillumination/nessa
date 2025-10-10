@@ -18,6 +18,7 @@ export const EProductCategories = {
     HYBRID_LIGHTS: 'Hybrid Lights',
     INDOOR_LIGHTING: 'Indoor Lighting',
     SMART_LIGHTING_SOLUTION:'Smart Lighting Solutions',
+      EMERGENCY_LIGHTING: 'Emergency Lighting'
 }
 
 export const CategoryToSubcategories = {
@@ -34,7 +35,8 @@ export const CategoryToSubcategories = {
     ],
     'Hybrid Lights': ['Hybrid Semi Integrated Solar Street Light Light', 'Hybrid Integrated Solar Street Light'],
 
-    'Smart Lighting Solutions': ['AC Smart Street Light', 'Solar Smart Street Light ']
+    'Smart Lighting Solutions': ['AC Smart Street Light', 'Solar Smart Street Light '],
+    'Emergency Lighting': ['Exit Light']
 
 }
 
