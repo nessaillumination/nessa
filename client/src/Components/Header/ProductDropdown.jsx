@@ -47,7 +47,8 @@ const ProductDropdown = ({ setIsMenuOpen, productOpen, setproductOpen }) => {
         ],
         'Hybrid Lights': ['Hybrid Semi Integrated Solar Street Light Light', 'Hybrid Integrated Solar Street Light'],
 
-        'Smart Lighting Solutions': ['AC Smart Street Light', 'Solar Smart Street Light ']
+        'Smart Lighting Solutions': ['AC Smart Street Light', 'Solar Smart Street Light '],
+        'Emergency Lighting':['Exit Light']
     }
 
 
