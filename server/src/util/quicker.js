@@ -115,7 +115,8 @@ export default {
         [EProductCategories.HYBRID_LIGHTS]: Object.values(EHybridLightsSubCategories),
         [EProductCategories.INDOOR_LIGHTING]: Object.values(EIndoorLightingSubCategories),
         [EProductCategories.SOLUTIONS]: Object.values(ESolutionsSubCategories),
-        [EProductCategories.SMART_LIGHTING_SOLUTION]: Object.values(ESmartLightingSolutions)
+        [EProductCategories.SMART_LIGHTING_SOLUTION]: Object.values(ESmartLightingSolutions),
+        [EProductCategories.EMERGENCY_LIGHTING]:Object.values(EACLightingSubCategories)
     },
     apiDetailsStatus : [
         {

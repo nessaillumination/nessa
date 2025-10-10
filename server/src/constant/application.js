@@ -15,6 +15,7 @@ export const EProductCategories = Object.freeze({
     INDOOR_LIGHTING: 'Indoor Lighting',
     SMART_LIGHTING_SOLUTION:'Smart Lighting Solutions',
     SOLUTIONS: 'Solutions',
+    EMERGENCY_LIGHTING: 'Emergency Lighting'
 });
 
 export const EACLightingSubCategories = Object.freeze({
@@ -26,7 +27,8 @@ export const EACLightingSubCategories = Object.freeze({
     FISSION_FLOOD_LIGHT: 'Fission Flood Light',
     AC_HIGH_MAST: 'AC High Mast',
     RGB_LIGHT : 'RGB Light',
-    TRAFFIC_BLINKER_LIGHT: 'TRAFFIC Blinker Light'
+    TRAFFIC_BLINKER_LIGHT: 'TRAFFIC Blinker Light',
+    EXIT_LIGHT :'Exit Light'
 });
 
 export const EElectronicsSubCategories = Object.freeze({
