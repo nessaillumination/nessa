@@ -17,6 +17,17 @@ import c11 from '../../assets/images/valueAddedServicesImages/corporate/c11.jpeg
 import c12 from '../../assets/images/valueAddedServicesImages/corporate/c12.png'
 import c13 from '../../assets/images/valueAddedServicesImages/corporate/c13.png'
 import c14 from '../../assets/images/valueAddedServicesImages/corporate/c14.png'
+import c15 from '../../assets/images/valueAddedServicesImages/corporate/c15.png'
+import c16 from '../../assets/images/valueAddedServicesImages/corporate/c16.png'
+import c17 from '../../assets/images/valueAddedServicesImages/corporate/c17.png'
+import c18 from '../../assets/images/valueAddedServicesImages/corporate/c18.png'
+import c19 from '../../assets/images/valueAddedServicesImages/corporate/c19.png'
+import c20 from '../../assets/images/valueAddedServicesImages/corporate/c20.png'
+import c21 from '../../assets/images/valueAddedServicesImages/corporate/c21.png'
+import c22 from '../../assets/images/valueAddedServicesImages/corporate/c22.png'
+import c23 from '../../assets/images/valueAddedServicesImages/corporate/c23.png'
+import c24 from '../../assets/images/valueAddedServicesImages/corporate/c24.png'
+import c25 from '../../assets/images/valueAddedServicesImages/corporate/c25.png'
 
 
 import n1 from '../../assets/images/valueAddedServicesImages/ngoimages/n1.jpeg'
@@ -35,6 +46,17 @@ import n13 from '../../assets/images/valueAddedServicesImages/ngoimages/n13.png'
 import n14 from '../../assets/images/valueAddedServicesImages/ngoimages/n14.png'
 import n15 from '../../assets/images/valueAddedServicesImages/ngoimages/n15.png'
 import n16 from '../../assets/images/valueAddedServicesImages/ngoimages/n16.png'
+import n17 from '../../assets/images/valueAddedServicesImages/ngoimages/n17.png'
+import n18 from '../../assets/images/valueAddedServicesImages/ngoimages/n18.png'
+import n19 from '../../assets/images/valueAddedServicesImages/ngoimages/n19.png'
+import n20 from '../../assets/images/valueAddedServicesImages/ngoimages/n20.png'
+import n21 from '../../assets/images/valueAddedServicesImages/ngoimages/n21.png'
+import n22 from '../../assets/images/valueAddedServicesImages/ngoimages/n22.png'
+import n23 from '../../assets/images/valueAddedServicesImages/ngoimages/n23.png'
+import n24 from '../../assets/images/valueAddedServicesImages/ngoimages/n24.png'
+import n25 from '../../assets/images/valueAddedServicesImages/ngoimages/n25.png'
+import n26 from '../../assets/images/valueAddedServicesImages/ngoimages/n26.png'
+import n27 from '../../assets/images/valueAddedServicesImages/ngoimages/n27.png'
 
 
 
@@ -120,6 +142,18 @@ export const corporateCusomters = [
   c12,
   c13,
   c14,
+  c15,
+  c16,
+  c17,
+  c18,
+  c19,
+  c20,
+  c21,
+  c22,
+  c23,
+  c24,
+  c25
+
 ]
 export const ngologos = [
   n1,
@@ -138,4 +172,15 @@ export const ngologos = [
   n14,
   n15,
   n16,
+  n17,
+  n18,
+  n19,
+  n20,
+  n21,
+  n22,
+  n23,
+  n24,
+  n25,
+  n26,
+  n27,
 ]
