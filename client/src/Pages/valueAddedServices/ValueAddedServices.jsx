@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import { Pagination, Autoplay } from 'swiper/modules'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 import hero from '../../assets/images/valueAddedServicesImages/hero.jpg'
 import Navbar from '../../Components/Header/Navbar'
@@ -12,7 +12,7 @@ import {
     ngologos,
     ourRulerUpliftmentsSolution,
     ourRulerUpliftmentsSolutionRightSection,
-    ourValuePreposition
+    // ourValuePreposition
 } from './ValueAddedServicesConfig'
 import { RiLightbulbFlashLine } from 'react-icons/ri'
 import smartVillageSolutions from '../../assets/images/valueAddedServicesImages/smartVillageSolution.png'
