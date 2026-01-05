@@ -156,6 +156,9 @@ export const corporateCusomters = [
 
 ]
 export const ngologos = [
+  n19,
+  n20,
+  n26,
   n1,
   n2,
   n3,
@@ -174,13 +177,10 @@ export const ngologos = [
   n16,
   n17,
   n18,
-  n19,
-  n20,
   n21,
   n22,
   n23,
   n24,
   n25,
-  n26,
   n27,
 ]
