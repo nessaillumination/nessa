@@ -21,7 +21,7 @@ const RecognizeEx = () => {
           <RecoExSec1 />  
           
         </div>
-        <div className="w-1/2 max-md:w-full py-[50px]  ">
+        <div className="w-1/2 max-md:w-full bg-[#eeeee7] py-[50px]  ">
           <div className=" text-2xl font-semibold leading-snug text-center text-black z-[2] relative">
             Awards &<span className="text-blue-500"> Recognition</span>
           </div>
