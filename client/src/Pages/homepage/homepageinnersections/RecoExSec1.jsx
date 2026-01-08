@@ -5,6 +5,11 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import news1 from '../../../assets/images/homepageimages/news/news1.webp';
 import news2 from '../../../assets/images/homepageimages/news/news2.webp';
 import news3 from '../../../assets/images/homepageimages/news/news3.webp';
+import news4 from '../../../assets/images/homepageimages/news/1 (10).png';
+import news5 from '../../../assets/images/homepageimages/news/3 (12).png';
+import news6 from '../../../assets/images/homepageimages/news/4 (9).png';
+import news7 from '../../../assets/images/homepageimages/news/Nessa PR.png';
+// import news8 from '../../../assets/images/homepageimages/news/PR.png';
 import { Link } from 'react-router-dom'
 
 
@@ -54,6 +59,26 @@ export default function RecoExSec1() {
                   },
                   {
                       image: news3,
+                      link: 'https://www.business-standard.com/content/press-releases-ani/nessa-illumination-technologies-pvt-ltd-launched-smart-light-and-hybrid-solar-high-mast-at-rei-expo-2024-124101001393_1.html ',
+                      heading: ''
+                  }
+                 , {
+                      image: news4,
+                      link: 'https://www.business-standard.com/content/press-releases-ani/nessa-illumination-technologies-pvt-ltd-launched-smart-light-and-hybrid-solar-high-mast-at-rei-expo-2024-124101001393_1.html ',
+                      heading: ''
+                  }
+                 , {
+                      image: news5,
+                      link: 'https://www.business-standard.com/content/press-releases-ani/nessa-illumination-technologies-pvt-ltd-launched-smart-light-and-hybrid-solar-high-mast-at-rei-expo-2024-124101001393_1.html ',
+                      heading: ''
+                  }
+                 , {
+                      image: news6,
+                      link: 'https://www.business-standard.com/content/press-releases-ani/nessa-illumination-technologies-pvt-ltd-launched-smart-light-and-hybrid-solar-high-mast-at-rei-expo-2024-124101001393_1.html ',
+                      heading: ''
+                  }
+                 , {
+                      image: news7,
                       link: 'https://www.business-standard.com/content/press-releases-ani/nessa-illumination-technologies-pvt-ltd-launched-smart-light-and-hybrid-solar-high-mast-at-rei-expo-2024-124101001393_1.html ',
                       heading: ''
                   }
