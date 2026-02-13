@@ -150,13 +150,13 @@ function Footer() {
                   <div className="w-fit max-md:w-full">
                       <h3 className="text-lg font-semibold mb-4">Legal</h3>
                       <ul className="space-y-3">
-                          <li>
+                          {/* <li>
                               <Link
                                   to="/terms"
                                   className="text-gray-400 hover:text-white">
                                   Terms & Conditions
                               </Link>
-                          </li>
+                          </li> */}
                           <li>
                               <Link
                                   to="/privacy"
@@ -164,13 +164,13 @@ function Footer() {
                                   Privacy Policy
                               </Link>
                           </li>
-                          <li>
+                          {/* <li>
                               <Link
                                   to="/esgpolicy"
                                   className="text-gray-400 hover:text-white">
                                   ESG Policy
                               </Link>
-                          </li>
+                          </li> */}
                           <li>
                               <Link
                                   to="/cookiespolicy"
