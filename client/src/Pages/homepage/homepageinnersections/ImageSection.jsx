@@ -1,5 +1,5 @@
 import image1 from '../../../assets/images/homepageimages/image1.webp';
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 function LightIntensity({ setBrightness }) {
   const [intensity, setIntensity] = useState(0.5);
@@ -107,164 +107,164 @@ function LightIntensity({ setBrightness }) {
   );
 }
 
-function ColorChangeController({ setColor }) {
-  const [angle, setAngle] = useState(60);
-  const [isDragging, setIsDragging] = useState(false);
-  const dialRef = useRef(null);
-  const knobRef = useRef(null);
-  const [draggingAngle, setDraggingAngle] = useState(60);
+// function ColorChangeController({ setColor }) {
+//   const [angle, setAngle] = useState(60);
+//   const [isDragging, setIsDragging] = useState(false);
+//   const dialRef = useRef(null);
+//   const knobRef = useRef(null);
+//   const [draggingAngle, setDraggingAngle] = useState(60);
 
-  const colors = [60, 120, 240];
+//   const colors = [60, 120, 240];
 
-  const calculateAngle = (centerX, centerY, clientX, clientY) => {
-    const deltaX = clientX - centerX;
-    const deltaY = clientY - centerY;
-    const angleRad = Math.atan2(deltaY, deltaX);
-    let angleDeg = (angleRad * 180) / Math.PI + 90;
-    if (angleDeg < 0) angleDeg += 360;
-    return angleDeg;
-  };
+//   const calculateAngle = (centerX, centerY, clientX, clientY) => {
+//     const deltaX = clientX - centerX;
+//     const deltaY = clientY - centerY;
+//     const angleRad = Math.atan2(deltaY, deltaX);
+//     let angleDeg = (angleRad * 180) / Math.PI + 90;
+//     if (angleDeg < 0) angleDeg += 360;
+//     return angleDeg;
+//   };
 
-  const handleMouseDown = (e) => {
-    e.preventDefault();
-    setIsDragging(true);
-  };
+//   const handleMouseDown = (e) => {
+//     e.preventDefault();
+//     setIsDragging(true);
+//   };
 
-  const handleMouseMove = (e) => {
-    if (!isDragging || !dialRef.current) return;
-    const rect = dialRef.current.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    const newAngle = calculateAngle(centerX, centerY, e.clientX, e.clientY);
-    setDraggingAngle(newAngle);
-  };
+//   const handleMouseMove = (e) => {
+//     if (!isDragging || !dialRef.current) return;
+//     const rect = dialRef.current.getBoundingClientRect();
+//     const centerX = rect.left + rect.width / 2;
+//     const centerY = rect.top + rect.height / 2;
+//     const newAngle = calculateAngle(centerX, centerY, e.clientX, e.clientY);
+//     setDraggingAngle(newAngle);
+//   };
 
-  const handleMouseUp = () => {
-    setIsDragging(false);
-    snapToColor(draggingAngle);
-  };
+//   const handleMouseUp = () => {
+//     setIsDragging(false);
+//     snapToColor(draggingAngle);
+//   };
 
-  const handleTouchMove = (e) => {
-    if (!isDragging || !dialRef.current) return;
-    const rect = dialRef.current.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    const newAngle = calculateAngle(
-      centerX,
-      centerY,
-      e.touches[0].clientX,
-      e.touches[0].clientY
-    );
-    setDraggingAngle(newAngle);
-  };
+//   const handleTouchMove = (e) => {
+//     if (!isDragging || !dialRef.current) return;
+//     const rect = dialRef.current.getBoundingClientRect();
+//     const centerX = rect.left + rect.width / 2;
+//     const centerY = rect.top + rect.height / 2;
+//     const newAngle = calculateAngle(
+//       centerX,
+//       centerY,
+//       e.touches[0].clientX,
+//       e.touches[0].clientY
+//     );
+//     setDraggingAngle(newAngle);
+//   };
 
-  const handleTouchEnd = () => {
-    setIsDragging(false);
-    snapToColor(draggingAngle);
-  };
+//   const handleTouchEnd = () => {
+//     setIsDragging(false);
+//     snapToColor(draggingAngle);
+//   };
 
-  const snapToColor = (angle) => {
-    const snappedAngle = colors.reduce((prev, curr) => {
-      return Math.abs(curr - angle) < Math.abs(prev - angle) ? curr : prev;
-    });
-    setAngle(snappedAngle);
-  };
+//   const snapToColor = (angle) => {
+//     const snappedAngle = colors.reduce((prev, curr) => {
+//       return Math.abs(curr - angle) < Math.abs(prev - angle) ? curr : prev;
+//     });
+//     setAngle(snappedAngle);
+//   };
 
-  useEffect(() => {
-    window.addEventListener('mouseup', handleMouseUp);
-    window.addEventListener('mouseleave', handleMouseUp);
-    return () => {
-      window.removeEventListener('mouseup', handleMouseUp);
-      window.removeEventListener('mouseleave', handleMouseUp);
-    };
-  }, []);
+//   useEffect(() => {
+//     window.addEventListener('mouseup', handleMouseUp);
+//     window.addEventListener('mouseleave', handleMouseUp);
+//     return () => {
+//       window.removeEventListener('mouseup', handleMouseUp);
+//       window.removeEventListener('mouseleave', handleMouseUp);
+//     };
+//   }, []);
 
-  useEffect(() => {
-    window.addEventListener('touchend', handleTouchEnd);
-    window.addEventListener('touchcancel', handleTouchEnd);
-    return () => {
-      window.removeEventListener('touchend', handleTouchEnd);
-      window.removeEventListener('touchcancel', handleTouchEnd);
-    };
-  }, []);
+//   useEffect(() => {
+//     window.addEventListener('touchend', handleTouchEnd);
+//     window.addEventListener('touchcancel', handleTouchEnd);
+//     return () => {
+//       window.removeEventListener('touchend', handleTouchEnd);
+//       window.removeEventListener('touchcancel', handleTouchEnd);
+//     };
+//   }, []);
 
-  let mainColor = `hsl(63, 90.60%, 53.90%) 30%`;
+//   let mainColor = `hsl(63, 90.60%, 53.90%) 30%`;
 
-  if (draggingAngle >= 0 && draggingAngle < 120) {
-    mainColor = `hsl(63, 90.60%, 53.90%) 30%`;
-    setColor('yellow');
-  } else if (draggingAngle >= 120 && draggingAngle < 240) {
-    mainColor = `hsl(120, 100%, 50%) 50%`;
-    setColor('green');
-  } else if (draggingAngle >= 240 && draggingAngle < 360) {
-    mainColor = `hsl(212, 78%, 66%) 100%`;
-    setColor('blue');
-  }
+//   if (draggingAngle >= 0 && draggingAngle < 120) {
+//     mainColor = `hsl(63, 90.60%, 53.90%) 30%`;
+//     setColor('yellow');
+//   } else if (draggingAngle >= 120 && draggingAngle < 240) {
+//     mainColor = `hsl(120, 100%, 50%) 50%`;
+//     setColor('green');
+//   } else if (draggingAngle >= 240 && draggingAngle < 360) {
+//     mainColor = `hsl(212, 78%, 66%) 100%`;
+//     setColor('blue');
+//   }
 
-  const gradientStops = [
-    `hsl(63, 90.60%, 53.90%) 30%`,
-    `hsl(120, 100%, 50%) 50%`,
-    `hsl(212, 78%, 66%) 100%`,
-  ].join(', ');
+//   const gradientStops = [
+//     `hsl(63, 90.60%, 53.90%) 30%`,
+//     `hsl(120, 100%, 50%) 50%`,
+//     `hsl(212, 78%, 66%) 100%`,
+//   ].join(', ');
 
-  return (
-    <div className="w-full max-w-sm shadow-xl  bg-white p-4 rounded-xl">
-      <div className="text-center mb-4">
-        <h2 className="text-lg md:text-2xl text-black flex items-center justify-center gap-3">
-          Change Color
-        </h2>
-      </div>
+//   return (
+//     <div className="w-full max-w-sm shadow-xl  bg-white p-4 rounded-xl">
+//       <div className="text-center mb-4">
+//         <h2 className="text-lg md:text-2xl text-black flex items-center justify-center gap-3">
+//           Change Color
+//         </h2>
+//       </div>
 
-      <div
-        ref={dialRef}
-        className="relative w-[60vw] sm:w-[200px] h-[60vw] sm:h-[200px] mx-auto p-[4vw] sm:p-[32px] bg-gray-100 rounded-full"
-        onMouseMove={handleMouseMove}
-        onTouchMove={handleTouchMove}
-        onMouseDown={handleMouseDown}
-        onTouchStart={handleMouseDown}
-      >
-        <div
-          className="absolute inset-2 rounded-full m-2"
-          style={{
-            background: `conic-gradient(${gradientStops})`,
-            filter: 'drop-shadow(0 0 10px rgba(0,0,0,0.3))',
-          }}
-        />
+//       <div
+//         ref={dialRef}
+//         className="relative w-[60vw] sm:w-[200px] h-[60vw] sm:h-[200px] mx-auto p-[4vw] sm:p-[32px] bg-gray-100 rounded-full"
+//         onMouseMove={handleMouseMove}
+//         onTouchMove={handleTouchMove}
+//         onMouseDown={handleMouseDown}
+//         onTouchStart={handleMouseDown}
+//       >
+//         <div
+//           className="absolute inset-2 rounded-full m-2"
+//           style={{
+//             background: `conic-gradient(${gradientStops})`,
+//             filter: 'drop-shadow(0 0 10px rgba(0,0,0,0.3))',
+//           }}
+//         />
 
-        <div className="absolute inset-8 rounded-full bg-gray-200 shadow-lg" />
-        <div className="absolute inset-12 rounded-full bg-white shadow-lg transition-all duration-200 transform shadow-black" />
-        <div
-          className="absolute inset-16 rounded-full transition-colors duration-200 border-[10px] border-gray-100"
-          style={{
-            boxShadow: `0 0 20px ${mainColor}40`,
-          }}
-        />
+//         <div className="absolute inset-8 rounded-full bg-gray-200 shadow-lg" />
+//         <div className="absolute inset-12 rounded-full bg-white shadow-lg transition-all duration-200 transform shadow-black" />
+//         <div
+//           className="absolute inset-16 rounded-full transition-colors duration-200 border-[10px] border-gray-100"
+//           style={{
+//             boxShadow: `0 0 20px ${mainColor}40`,
+//           }}
+//         />
 
-        <div
-          ref={knobRef}
-          onMouseDown={handleMouseDown}
-          onTouchStart={handleMouseDown}
-          className={`absolute w-[15px] sm:w-6 h-[15px] sm:h-6 ${
-            draggingAngle > 50 && draggingAngle < 200
-              ? '-ml-2 -mt-2'
-              : '-ml-3 -mt-3'
-          } cursor-grab active:cursor-grabbing`}
-          style={{
-            left: '50%',
-            top: '50%',
-            transform: `rotate(${draggingAngle}deg) translateY(-50px) rotate(-${draggingAngle}deg)`,
-            transition: isDragging ? 'none' : 'transform 0.1s ease-out',
-          }}
-        >
-          <div className="w-full h-full rounded-full bg-[#004fff] shadow-lg" />
-        </div>
-      </div>
-    </div>
-  );
-}
+//         <div
+//           ref={knobRef}
+//           onMouseDown={handleMouseDown}
+//           onTouchStart={handleMouseDown}
+//           className={`absolute w-[15px] sm:w-6 h-[15px] sm:h-6 ${
+//             draggingAngle > 50 && draggingAngle < 200
+//               ? '-ml-2 -mt-2'
+//               : '-ml-3 -mt-3'
+//           } cursor-grab active:cursor-grabbing`}
+//           style={{
+//             left: '50%',
+//             top: '50%',
+//             transform: `rotate(${draggingAngle}deg) translateY(-50px) rotate(-${draggingAngle}deg)`,
+//             transition: isDragging ? 'none' : 'transform 0.1s ease-out',
+//           }}
+//         >
+//           <div className="w-full h-full rounded-full bg-[#004fff] shadow-lg" />
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 
 export default function ImageSection() {
-  const [color, setColor] = useState('yellow');
+  const [color] = useState('yellow');
   const [brightness, setBrightness] = useState(50);
 
   const getHueRotation = (color) => {
@@ -292,7 +292,7 @@ export default function ImageSection() {
         />
       </div>
       <div className="w-full md:translate-y-[-5vw] max-md:mb-10 px-[5vw] flex gap-6 justify-center flex-wrap">
-        <ColorChangeController setColor={setColor} />
+        {/* <ColorChangeController setColor={setColor} /> */}
         <LightIntensity setBrightness={setBrightness} brightness={brightness} />
       </div>
     </div>

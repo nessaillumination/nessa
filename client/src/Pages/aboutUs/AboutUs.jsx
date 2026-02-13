@@ -20,7 +20,7 @@ const AboutUs = () => {
 
     const whyChooseNessaBoxData = [
         {
-            title: '16+ Years of Expertise',
+            title:  `${new Date().getFullYear() - 2008}+ Years of Expertise`,
             description: 'Every Nessa product is designed and manufactured at our state-of-the-art facility in Ahmedabad, spanning 17,000 sq. ft.'
         },
         {
