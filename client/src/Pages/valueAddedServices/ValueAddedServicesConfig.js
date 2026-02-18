@@ -29,7 +29,6 @@ import c23 from '../../assets/images/valueAddedServicesImages/corporate/c23.png'
 import c24 from '../../assets/images/valueAddedServicesImages/corporate/c24.png'
 import c25 from '../../assets/images/valueAddedServicesImages/corporate/c25.png'
 
-
 import n1 from '../../assets/images/valueAddedServicesImages/ngoimages/n1.jpeg'
 import n2 from '../../assets/images/valueAddedServicesImages/ngoimages/n2.jpeg'
 import n3 from '../../assets/images/valueAddedServicesImages/ngoimages/n3.jpeg'
@@ -58,129 +57,71 @@ import n25 from '../../assets/images/valueAddedServicesImages/ngoimages/n25.png'
 import n26 from '../../assets/images/valueAddedServicesImages/ngoimages/n26.png'
 import n27 from '../../assets/images/valueAddedServicesImages/ngoimages/n27.png'
 
-
-
 export const ourValuePreposition = {
-  items: [
-    {
-      title: 'Expert Team',
-      text: 'We boast a multidisciplinary team of seasoned professionals.',
-    },
-    {
-      title: 'Comprehensive Service',
-      text: 'We offer CSR policy formulation, program design, monitoring and evaluation, CSR reporting, and tax-efficient project structures.',
-    },
-    {
-      title: 'Strategic Expertise',
-      text: 'Our team excels in defining CSR strategies, implementation modalities, and developing standardized processes and systems for effective CSR implementation.',
-    },
-    {
-      title: 'Client Support',
-      text: 'We assist clients in onboarding partners, monitoring and evaluating projects, and keeping the CSR committee updated with industry trends and reporting.',
-    },
-    {
-      title: 'Real-Time Monitoring',
-      text: 'Our CSR tool provides real-time information to stakeholders and facilitates concurrent project monitoring.',
-    },
-    {
-      title: 'Thorough Consulting',
-      text: 'Our CSR project management services offer a comprehensive consulting approach, ensuring effective and impactful CSR initiatives.',
-    },
-  ],
-};
+    items: [
+        {
+            title: 'Expert Team',
+            text: 'We boast a multidisciplinary team of seasoned professionals.'
+        },
+        {
+            title: 'Comprehensive Service',
+            text: 'We offer CSR policy formulation, program design, monitoring and evaluation, CSR reporting, and tax-efficient project structures.'
+        },
+        {
+            title: 'Strategic Expertise',
+            text: 'Our team excels in defining CSR strategies, implementation modalities, and developing standardized processes and systems for effective CSR implementation.'
+        },
+        {
+            title: 'Client Support',
+            text: 'We assist clients in onboarding partners, monitoring and evaluating projects, and keeping the CSR committee updated with industry trends and reporting.'
+        },
+        {
+            title: 'Real-Time Monitoring',
+            text: 'Our CSR tool provides real-time information to stakeholders and facilitates concurrent project monitoring.'
+        },
+        {
+            title: 'Thorough Consulting',
+            text: 'Our CSR project management services offer a comprehensive consulting approach, ensuring effective and impactful CSR initiatives.'
+        }
+    ]
+}
 
 export const ourRulerUpliftmentsSolution = [
     {
         poster: smartVillage,
-        title: 'Smart Village',
+        title: 'Smart Village'
     },
     {
         poster: solarLighting,
-        title: 'Solar Lighting',
+        title: 'Solar Lighting'
     },
     {
         poster: solarIrrigation,
-        title: 'Solar Irrigation',
+        title: 'Solar Irrigation'
     },
     {
         poster: solarBasedElectricity,
-        title: 'Solar Based Electricity',
-    },
+        title: 'Solar Based Electricity'
+    }
 ]
 export const ourRulerUpliftmentsSolutionRightSection = [
     {
-        inCircleNumbers:'950+',
-        title: 'Solar street LED lights',
+        inCircleNumbers: '150K+',
+        title: 'Solar Street Lights'
     },
     {
-        inCircleNumbers:'54+',
-        title: 'LED based high must system',
+        inCircleNumbers: '300+',
+        title: 'Solar High Mast'
     },
     {
-        inCircleNumbers:'60+',
-        title: 'Solar Rooftop',
+        inCircleNumbers: '6000+',
+        title: 'Hp Solar Pumps'
     },
     {
-        inCircleNumbers:'120+',
-        title: 'Solar water pump',
-    },
+        inCircleNumbers: '5000+',
+        title: 'Villages impacted'
+    }
 ]
 
-
-export const corporateCusomters = [
-  c1,
-  c2,
-  c3,
-  c4,
-  c5,
-  c6,
-  c7,
-  c8,
-  c9,
-  c10,
-  c11,
-  c12,
-  c13,
-  c14,
-  c15,
-  c16,
-  c17,
-  c18,
-  c19,
-  c20,
-  c21,
-  c22,
-  c23,
-  c24,
-  c25
-
-]
-export const ngologos = [
-  n19,
-  n20,
-  n26,
-  n1,
-  n2,
-  n3,
-  n4,
-  n5,
-  n6,
-  n7,
-  n8,
-  n9,
-  n10,
-  n11,
-  n12,
-  n13,
-  n14,
-  n15,
-  n16,
-  n17,
-  n18,
-  n21,
-  n22,
-  n23,
-  n24,
-  n25,
-  n27,
-]
+export const corporateCusomters = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20, c21, c22, c23, c24, c25]
+export const ngologos = [n19, n20, n26, n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13, n14, n15, n16, n17, n18, n21, n22, n23, n24, n25, n27]
