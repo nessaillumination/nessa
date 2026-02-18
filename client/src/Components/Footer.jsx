@@ -195,7 +195,7 @@ function Footer() {
                                 382405{' '}
                             </li>
                             <li className="text-gray-400">
-                                <strong>Corporate Headquarter :</strong> 2nd floor, Devraj industrial park, Piplaj Pirana Road, Piplaj, Ahmedabad,
+                                <strong>Corporate Headquarter :</strong> 102 , 2nd floor, Devraj industrial park, Piplaj Pirana Road, Piplaj, Ahmedabad,
                                 Gujarat 382405{' '}
                             </li>
                         </ul>
