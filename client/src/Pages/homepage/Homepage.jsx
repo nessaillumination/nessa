@@ -346,7 +346,7 @@ const Homepage = () => {
                         style={{ paddingTop: '56.25%' }}>
                         <iframe
                             className="absolute top-0 left-0 w-full h-full rounded-xl"
-                            src="https://www.youtube.com/embed/2NNnpRz_7xs?autoplay=1&mute=1"
+                            src="https://www.youtube.com/embed/Ebq6QJZ3iO4?autoplay=1&mute=1"
                             title="YouTube video player"
                             loading="lazy"
                             frameBorder="0"
