@@ -17,6 +17,7 @@ import { fetchUtilsData, saveContactUs, uploadFile } from '../../services/api.se
 import Footer from '../../Components/Footer'
 import { Link } from 'react-router-dom'
 import SEO from '../../helper/Seo'
+import { ImOffice } from 'react-icons/im'
 
 const StyleWrapper = styled.div`
     input[type='file']::file-selector-button {
@@ -179,8 +180,16 @@ const ContactUs = () => {
             <SEO
                 title={'Contact LED Lighting Company | Get Lighting Solutions Quote | Nessa'}
                 ogTitle={'Contact LED Lighting Company | Get Lighting Solutions Quote | Nessa'}
-                description={'Contact Nessa for LED and solar lighting solutions in India. Enquire for quotes from leading LED lighting suppliers and enhance your projects with efficient lighting.'}
-                primaryKeyword={['led lighting company contact', 'lighting solutions enquiry', 'solar lighting company contact', 'get lighting quote', 'led lighting suppliers in india']}
+                description={
+                    'Contact Nessa for LED and solar lighting solutions in India. Enquire for quotes from leading LED lighting suppliers and enhance your projects with efficient lighting.'
+                }
+                primaryKeyword={[
+                    'led lighting company contact',
+                    'lighting solutions enquiry',
+                    'solar lighting company contact',
+                    'get lighting quote',
+                    'led lighting suppliers in india'
+                ]}
             />
             <StyleWrapper>
                 <div className="w-full overflow-hidden">
@@ -205,18 +214,30 @@ const ContactUs = () => {
                         <div className="w-1/2 relative overflow-hidden max-lg:w-full p-[10px]  text-white  rounded-lg shadow-lg">
                             <div className="w-full min-h-[150px] bg-blue-500 rounded-lg p-[30px]">
                                 <h1 className="text-4xl font-semibold">Headquarters Address</h1>
-                                <div className="flex items-center justify-center mt-5  gap-10">
+                                <div className='flex md:flex-row flex-col gap-2 my-4'>
+                                    <div className='border-l-4 pl-2 border-blue-950/70 bg-black/20 p-3 rounded-tr-lg rounded-br-lg'>
+                                        <h4 className="md:text-xl text-lg font-semibold flex gap-2 items-center"> <FaLocationDot className="size-6" />Registered Address</h4>
+                                        <address className='pl-8'>36-A, Devraj Industrial Park, Pipalaj, Pirana Rd, Piplaj, Ahmedabad, Gujarat 382405</address>{' '}
+                                    </div>
+                                    <div className='border-l-4 pl-2 border-blue-950/70 bg-black/20 p-3 rounded-tr-lg rounded-br-lg'>
+                                       <h4 className="md:text-xl text-lg font-semibold flex gap-2 items-center"><ImOffice className='size-6'/>Corporate Headquater</h4>
+                                        <address className='pl-8'>
+                                            2nd floor, Devraj industrial park, Piplaj Pirana Road, Piplaj, Ahmedabad, Gujarat 382405
+                                        </address>{' '}
+                                    </div>
+                                </div>
+                                {/* <div className="flex items-center justify-center mt-5  gap-10">
                                     <FaLocationDot className="w-6 h-6" />
                                     <h1>36-A, Devraj Industrial Park, Near Pipalaj, Pirana Rd, Piplaj, Ahmedabad, Gujarat 382405 </h1>
-                                </div>
+                                </div> */}
                             </div>
                             <div className="flex justify-between mt-5 text-black  gap-5 max-[400px]:flex-col ">
                                 <div className="w-1/2 max-[400px]:w-full max-[400px]:flex max-[400px]:flex-col max-[400px]:justify-center max-[400px]:items-center  min-h-[100px] p-[20px] max-sm:px-[10px] max-sm:text-sm bg-blue-300 rounded-lg">
                                     <h1 className="font-semibold text-lg mb-2">Domestic Inquiry</h1>
-                                    <div className="flex  flex-wrap  items-center gap-2">
+                                    {/* <div className="flex  flex-wrap  items-center gap-2">
                                         <MdCall />
                                         <h1>+919375279778</h1>
-                                    </div>
+                                    </div> */}
                                     <div className="flex   flex-wrap items-center gap-2">
                                         <MdEmail />
                                         <h1>sales@nessa.in</h1>
@@ -224,10 +245,10 @@ const ContactUs = () => {
                                 </div>
                                 <div className="w-1/2 max-[400px]:w-full max-[400px]:flex max-[400px]:flex-col max-[400px]:justify-center max-[400px]:items-center  min-h-[100px] p-[20px] max-sm:px-[10px] max-sm:text-sm bg-blue-300 rounded-lg">
                                     <h1 className="font-semibold text-lg mb-2">International Inquiry</h1>
-                                    <div className="flex  flex-wrap  items-center gap-2">
+                                    {/* <div className="flex  flex-wrap  items-center gap-2">
                                         <MdCall />
                                         <h1>+919636379923</h1>
-                                    </div>
+                                    </div> */}
                                     <div className="flex   flex-wrap items-center gap-2">
                                         <MdEmail />
                                         <h1>exports@nessa.in</h1>
@@ -237,10 +258,10 @@ const ContactUs = () => {
                             <div className="flex justify-between mt-5 text-black  gap-5 max-[400px]:flex-col ">
                                 <div className="w-1/2 max-[400px]:w-full max-[400px]:flex max-[400px]:flex-col max-[400px]:justify-center max-[400px]:items-center  min-h-[100px] p-[20px] max-sm:px-[10px] max-sm:text-sm bg-blue-300 rounded-lg">
                                     <h1 className="font-semibold text-lg mb-2">Service Inquiry</h1>
-                                    <div className="flex  flex-wrap  items-center gap-2">
+                                    {/* <div className="flex  flex-wrap  items-center gap-2">
                                         <MdCall />
                                         <h1>+919909041228 </h1>
-                                    </div>
+                                    </div> */}
                                     <div className="flex   flex-wrap items-center gap-2">
                                         <MdEmail />
                                         <h1>services@nessa.in</h1>
@@ -248,10 +269,10 @@ const ContactUs = () => {
                                 </div>
                                 <div className="w-1/2 max-[400px]:w-full max-[400px]:flex max-[400px]:flex-col max-[400px]:justify-center max-[400px]:items-center  min-h-[100px] p-[20px] max-sm:px-[10px] max-sm:text-sm bg-blue-300 rounded-lg">
                                     <h1 className="font-semibold text-lg mb-2">Career Inquiry</h1>
-                                    <div className="flex  flex-wrap  items-center gap-2">
+                                    {/* <div className="flex  flex-wrap  items-center gap-2">
                                         <MdCall />
                                         <h1>+919879100877</h1>
-                                    </div>
+                                    </div> */}
                                     <div className="flex   flex-wrap items-center gap-2">
                                         <MdEmail />
                                         <h1> careers@nessa.in</h1>
@@ -261,10 +282,10 @@ const ContactUs = () => {
                             <div className="flex justify-between mt-5 text-black  gap-5 max-[400px]:flex-col ">
                                 <div className="w-1/2 max-[400px]:w-full max-[400px]:flex max-[400px]:flex-col max-[400px]:justify-center max-[400px]:items-center  min-h-[100px] p-[20px] max-sm:px-[10px] max-sm:text-sm bg-blue-300 rounded-lg">
                                     <h1 className="font-semibold text-lg mb-2">Marketing Inquiry</h1>
-                                    <div className="flex  flex-wrap  items-center gap-2">
+                                    {/* <div className="flex  flex-wrap  items-center gap-2">
                                         <MdCall />
                                         <h1>+918690779778 </h1>
-                                    </div>
+                                    </div> */}
                                     <div className="flex   flex-wrap items-center gap-2">
                                         <MdEmail />
                                         <h1> marketing@nessa.in </h1>
@@ -272,10 +293,10 @@ const ContactUs = () => {
                                 </div>
                                 <div className="w-1/2 max-[400px]:w-full max-[400px]:flex max-[400px]:flex-col max-[400px]:justify-center max-[400px]:items-center  min-h-[100px] p-[20px] max-sm:px-[10px] max-sm:text-sm bg-blue-300 rounded-lg">
                                     <h1 className="font-semibold text-lg mb-2">CSR Inquiry</h1>
-                                    <div className="flex  flex-wrap  items-center gap-2">
+                                    {/* <div className="flex  flex-wrap  items-center gap-2">
                                         <MdCall />
                                         <h1>+919909041719</h1>
-                                    </div>
+                                    </div> */}
                                     <div className="flex   flex-wrap items-center gap-2">
                                         <MdEmail />
                                         <h1> csr@nessa.in</h1>
@@ -284,10 +305,10 @@ const ContactUs = () => {
                             </div>
                             <div className="w-full mt-5 flex flex-col text-black items-center justify-center  min-h-[100px] p-[20px] max-sm:px-[10px] max-sm:text-sm bg-blue-300 rounded-lg">
                                 <h1 className="font-semibold text-lg mb-2">Other Inquiry</h1>
-                                <div className="flex  flex-wrap  items-center gap-2">
+                                {/* <div className="flex  flex-wrap  items-center gap-2">
                                     <MdCall />
                                     <h1>+918000479780</h1>
-                                </div>
+                                </div> */}
                                 <div className="flex   flex-wrap items-center gap-2">
                                     <MdEmail />
                                     <h1> info@nessa.in</h1>
@@ -346,8 +367,9 @@ const ContactUs = () => {
                                         name="name"
                                         value={formData.name}
                                         onChange={handleInputChange}
-                                        className={`w-full p-2 border-b-2 font-semibold outline-none focus:border-blue-800 ${errors.name ? 'border-red-500' : 'border-gray-500'
-                                            } rounded`}
+                                        className={`w-full p-2 border-b-2 font-semibold outline-none focus:border-blue-800 ${
+                                            errors.name ? 'border-red-500' : 'border-gray-500'
+                                        } rounded`}
                                     />
                                     {errors.name && <span className="text-red-500 text-sm">{errors.name}</span>}
                                 </div>
@@ -357,8 +379,9 @@ const ContactUs = () => {
                                         name="email"
                                         value={formData.email}
                                         onChange={handleInputChange}
-                                        className={`w-full p-2 border-b-2 font-semibold outline-none focus:border-blue-800   ${errors.email ? 'border-red-500' : 'border-gray-500'
-                                            } rounded`}
+                                        className={`w-full p-2 border-b-2 font-semibold outline-none focus:border-blue-800   ${
+                                            errors.email ? 'border-red-500' : 'border-gray-500'
+                                        } rounded`}
                                     />
                                     {errors.email && <span className="text-red-500 text-sm">{errors.email}</span>}
                                 </div>
@@ -379,8 +402,9 @@ const ContactUs = () => {
                                         value={formData.phoneNumber}
                                         onChange={handlePhoneChange}
                                         placeholder="+91XXXXXXXXXX"
-                                        className={`w-full p-2 border-b-2 font-semibold outline-none focus:border-blue-800 ${errors.phoneNumber ? 'border-red-500' : 'border-gray-500'
-                                            } rounded`}
+                                        className={`w-full p-2 border-b-2 font-semibold outline-none focus:border-blue-800 ${
+                                            errors.phoneNumber ? 'border-red-500' : 'border-gray-500'
+                                        } rounded`}
                                     />
                                     {errors.phoneNumber && <span className="text-red-500 text-sm">{errors.phoneNumber}</span>}
                                 </div>
@@ -388,23 +412,28 @@ const ContactUs = () => {
 
                             <div className="mt-10">
                                 <label className="block text-gray-700 mb-2  ">Select Subject</label>
-                                {['General Inquiry', 'Domestic Inquiry', 'Service Inquiry', 'International Inquiry', 'CSR Inquiry', 'Career Inquiry'].map(
-                                    (subject, index) => (
-                                        <label
-                                            key={index}
-                                            className="inline-flex items-center mr-6 mb-4 cursor-pointer">
-                                            <input
-                                                type="radio"
-                                                name="subject"
-                                                value={subject}
-                                                checked={formData.subject === subject}
-                                                onChange={handleInputChange}
-                                                className="form-radio cursor-pointer"
-                                            />
-                                            <span className="ml-2">{subject}</span>
-                                        </label>
-                                    )
-                                )}
+                                {[
+                                    'General Inquiry',
+                                    'Domestic Inquiry',
+                                    'Service Inquiry',
+                                    'International Inquiry',
+                                    'CSR Inquiry',
+                                    'Career Inquiry'
+                                ].map((subject, index) => (
+                                    <label
+                                        key={index}
+                                        className="inline-flex items-center mr-6 mb-4 cursor-pointer">
+                                        <input
+                                            type="radio"
+                                            name="subject"
+                                            value={subject}
+                                            checked={formData.subject === subject}
+                                            onChange={handleInputChange}
+                                            className="form-radio cursor-pointer"
+                                        />
+                                        <span className="ml-2">{subject}</span>
+                                    </label>
+                                ))}
                             </div>
 
                             <div className="mt-6">
@@ -425,8 +454,9 @@ const ContactUs = () => {
                                     name="message"
                                     value={formData.message}
                                     onChange={handleInputChange}
-                                    className={`w-full p-2 border-b-2 font-semibold outline-none focus:border-blue-800 h-[50px] max-h-[100px] ${errors.message ? 'border-red-500' : 'border-gray-500'
-                                        } rounded`}></textarea>
+                                    className={`w-full p-2 border-b-2 font-semibold outline-none focus:border-blue-800 h-[50px] max-h-[100px] ${
+                                        errors.message ? 'border-red-500' : 'border-gray-500'
+                                    } rounded`}></textarea>
                                 {errors.message && <span className="text-red-500 text-sm">{errors.message}</span>}
                             </div>
                             <div className="mt-6">
@@ -446,8 +476,9 @@ const ContactUs = () => {
                                 <button
                                     type="submit"
                                     disabled={isSubmitting || isUploading || !acceptPolicy}
-                                    className={`mt-10 bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-600 transition ${isSubmitting || isUploading || !acceptPolicy ? 'opacity-50 cursor-not-allowed' : ''
-                                        }`}>
+                                    className={`mt-10 bg-blue-500 text-white font-semibold py-2 px-4 rounded hover:bg-blue-600 transition ${
+                                        isSubmitting || isUploading || !acceptPolicy ? 'opacity-50 cursor-not-allowed' : ''
+                                    }`}>
                                     {isSubmitting ? 'Sending...' : 'Send Message'}
                                 </button>
                             </div>
@@ -466,7 +497,8 @@ const ContactUs = () => {
                 </div>
                 <Footer />
             </StyleWrapper>
-        </>)
+        </>
+    )
 }
 
 export default ContactUs

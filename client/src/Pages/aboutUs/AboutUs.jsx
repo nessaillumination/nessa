@@ -2,14 +2,14 @@ import { nessaEdgeItems, whoWeAre } from './AboutUsConfig'
 import { RiLightbulbFlashLine } from 'react-icons/ri'
 import ProductAndTestingSwiper from './ProductAndTestingSwiper'
 import CertificatesSwiper from './CertificatesSwiper'
-import hero from '../../assets/images/aboutUs/Aboutushero.jpg'
+import hero from '../../assets/images/aboutUs/AboutUsBannerNew.png'
 import ourVision from '../../assets/images/aboutUs/ourVision.png'
 import ourMission from '../../assets/images/aboutUs/ourMission.png'
 import customersegment from '../../assets/images/aboutUs/customersegment.svg'
 import Navbar from '../../Components/Header/Navbar'
 import SideComponent from '../../Components/sideComponent/SideComponent'
 import { AnimatePresence, motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import {  useState } from 'react'
 import PartnersReviewsSwiper from '../../Components/partnerreviews/PartnersReviewsSwiper'
 import Footer from '../../Components/Footer'
 import TeamSwiper from './TeamSwiper'
@@ -119,7 +119,7 @@ const AboutUs = () => {
                         style={{ paddingTop: '56.25%' }}>
                         <iframe
                             className="absolute top-0 left-0 w-full h-full rounded-xl"
-                            src="https://www.youtube.com/embed/U6f9QtHyel8?autoplay=1&mute=1&controls=1&cc_load_policy=0&loop=1&playlist=U6f9QtHyel8&rel=0"
+                            src="https://www.youtube.com/embed/Ebq6QJZ3iO4?autoplay=1&mute=1"
                             title="YouTube video player"
                             loading="lazy"
                             frameBorder="0"
