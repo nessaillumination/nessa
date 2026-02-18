@@ -1,10 +1,10 @@
 import { Link, Outlet, useLocation } from 'react-router-dom'
-import Media from './Media'
+// import Media from './Media'
 import resourceshero from '../../assets/images/resources/resourceshero.jpg'
 import Navbar from '../../Components/Header/Navbar'
 import SideComponent from '../../Components/sideComponent/SideComponent'
 import Footer from '../../Components/Footer'
-import { fetchUtilsData } from '../../services/api.services'
+// import { fetchUtilsData } from '../../services/api.services'
 import { useEffect, useState } from 'react'
 import { resourcesUtilsConfigHardCodedData } from './ResourcesConfig'
 import toast from 'react-hot-toast'
@@ -151,7 +151,7 @@ export const Resources = () => {
             </div>
 
             <ResourcesInsights />
-            <Media />
+            {/* <Media /> */}
 
             <Footer />
         </div>
