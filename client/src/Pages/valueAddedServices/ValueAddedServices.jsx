@@ -131,10 +131,10 @@ export const ValueAddedServices = () => {
                 <Navbar />
                 <SideComponent />
 
-                <div className="w-full h-[300px] max-sm:h-[200px] relative flex items-center  justify-center ">
+                <div className="w-full h-[45vh] overflow-hidden max-sm:h-[100px] relative flex items-center  justify-center ">
                     <img
                         loading="lazy"
-                        className="w-full min-h-[150px]  object-cover object-left  absolute  "
+                        className="w-full min-h-[150px] object-contain  md:object-cover object-center  absolute  "
                         src={hero}
                         alt=""
                     />

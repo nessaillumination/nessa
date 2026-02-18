@@ -4,7 +4,7 @@ import { MdCall } from 'react-icons/md'
 import { MdEmail } from 'react-icons/md'
 import { RiFacebookBoxLine } from 'react-icons/ri'
 import { FaInstagram } from 'react-icons/fa'
-import { IoLogoWhatsapp } from 'react-icons/io5'
+import { IoLogoWhatsapp, IoMail } from 'react-icons/io5'
 import { CiLinkedin } from 'react-icons/ci'
 import { RiTwitterXFill } from 'react-icons/ri'
 import styled from 'styled-components'
@@ -18,6 +18,7 @@ import Footer from '../../Components/Footer'
 import { Link } from 'react-router-dom'
 import SEO from '../../helper/Seo'
 import { ImOffice } from 'react-icons/im'
+import { BiPhoneCall } from 'react-icons/bi'
 
 const StyleWrapper = styled.div`
     input[type='file']::file-selector-button {
@@ -214,18 +215,49 @@ const ContactUs = () => {
                         <div className="w-1/2 relative overflow-hidden max-lg:w-full p-[10px]  text-white  rounded-lg shadow-lg">
                             <div className="w-full min-h-[150px] bg-blue-500 rounded-lg p-[30px]">
                                 <h1 className="text-4xl font-semibold">Headquarters Address</h1>
-                                <div className='flex md:flex-row flex-col gap-2 my-4'>
-                                    <div className='border-l-4 pl-2 border-blue-950/70 bg-black/20 p-3 rounded-tr-lg rounded-br-lg'>
-                                        <h4 className="md:text-xl text-lg font-semibold flex gap-2 items-center"> <FaLocationDot className="size-6" />Registered Address</h4>
-                                        <address className='pl-8'>36-A, Devraj Industrial Park, Pipalaj, Pirana Rd, Piplaj, Ahmedabad, Gujarat 382405</address>{' '}
+                                <div className="border-l-4 pl-2 border-blue-950/70 bg-black/20 p-3 rounded-tr-lg rounded-br-lg flex md:flex-row flex-col items-start md:items-center gap-6 my-2">
+                                    <a
+                                        href="tel:+918690779778"
+                                        className="flex items-center gap-2">
+                                        <BiPhoneCall className="size-6" /> +918690779778
+                                    </a>
+                                    <a
+                                        href="mailto:info@nessa.in"
+                                        className="flex items-center gap-2">
+                                        <IoMail className="size-6" /> info@nessa.in
+                                    </a>
+                                </div>
+                                <div className="flex md:flex-row flex-col gap-2 my-4">
+                                    <div className="border-l-4 pl-2 border-blue-950/70 bg-black/20 p-3 rounded-tr-lg rounded-br-lg">
+                                        <h4 className="md:text-xl text-lg font-semibold flex gap-2 items-center">
+                                            {' '}
+                                            <FaLocationDot className="size-6" />
+                                            Registered Address
+                                        </h4>
+                                        <address className="pl-8">
+                                            36-A, Devraj Industrial Park, Pipalaj, Pirana Rd, Piplaj, Ahmedabad, Gujarat 382405
+                                        </address>{' '}
                                     </div>
-                                    <div className='border-l-4 pl-2 border-blue-950/70 bg-black/20 p-3 rounded-tr-lg rounded-br-lg'>
-                                       <h4 className="md:text-xl text-lg font-semibold flex gap-2 items-center"><ImOffice className='size-6'/>Corporate Headquater</h4>
-                                        <address className='pl-8'>
+                                    <div className="border-l-4 pl-2 border-blue-950/70 bg-black/20 p-3 rounded-tr-lg rounded-br-lg">
+                                        <h4 className="md:text-xl text-lg font-semibold flex gap-2 items-center">
+                                            <ImOffice className="size-6" />
+                                            Corporate Headquater
+                                        </h4>
+                                        <address className="pl-8">
                                             2nd floor, Devraj industrial park, Piplaj Pirana Road, Piplaj, Ahmedabad, Gujarat 382405
                                         </address>{' '}
                                     </div>
                                 </div>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7348.649409568016!2d72.54749124151411!3d22.938265850794643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e859f9e9ee219%3A0x4762594d909ba9f2!2sNessa%20Illumination%20Technologies%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1734817362201!5m2!1sen!2sin"
+                                    className="w-full rounded-xl"
+                                    height={300}
+                                    style={{ border: 0 }}
+                                    allowFullScreen=""
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                />
+
                                 {/* <div className="flex items-center justify-center mt-5  gap-10">
                                     <FaLocationDot className="w-6 h-6" />
                                     <h1>36-A, Devraj Industrial Park, Near Pipalaj, Pirana Rd, Piplaj, Ahmedabad, Gujarat 382405 </h1>
