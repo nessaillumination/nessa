@@ -1,16 +1,14 @@
-import { CiMail } from 'react-icons/ci'
-import { IoCallOutline } from 'react-icons/io5'
-import { IoEarthOutline } from 'react-icons/io5'
-import { FaCaretDown } from 'react-icons/fa'
+import { CiLinkedin, CiMail } from 'react-icons/ci'
+import { IoCallOutline, IoLogoWhatsapp } from 'react-icons/io5'
+import {  FaInstagram } from 'react-icons/fa'
 import { IoIosArrowDown } from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { IoMenu, IoClose } from 'react-icons/io5'
 import logo from '../../assets/images/nessalogo.webp'
-import { MdPermContactCalendar, MdStadium, MdSupportAgent } from 'react-icons/md'
-import { GoProjectSymlink } from 'react-icons/go'
+import { MdPermContactCalendar, MdSupportAgent } from 'react-icons/md'
 import { GrProjects } from 'react-icons/gr'
-import { FaGears} from 'react-icons/fa6'
+import { FaGears } from 'react-icons/fa6'
 import { AnimatePresence, motion } from 'framer-motion'
 import { GrResources } from 'react-icons/gr'
 import { allSolutions } from '../../services/api.services'
@@ -31,6 +29,7 @@ import port from '../../assets/images/navbar/port.svg'
 import hazardous from '../../assets/images/navbar/Hazardous.svg'
 import thermal from '../../assets/images/navbar/thermal.svg'
 import solar from '../../assets/images/navbar/solar.svg'
+import { RiFacebookBoxLine, RiTwitterXFill } from 'react-icons/ri'
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [soluitonOpen, setsoluitonOpen] = useState(false)
@@ -38,67 +37,151 @@ const Navbar = () => {
     const [productOpen, setproductOpen] = useState(false)
     const [calculatorOpen, setCalculatorOpen] = useState(false)
     const [solutionsDropdown, setSolutionsDropdown] = useState([
-    {
-        logo: <img loading="lazy" src={airport} alt="Airport" className="w-[40px] h-[40px] " />,
-        link: '',
-        subcategories: 'Airports'
-    },
-    {
-        logo: <img loading="lazy" src={mines} alt="Mines" className="w-[40px] h-[40px] " />,
-        link: '',
-        subcategories: 'Mines'
-    },
-    {
-        logo: <img loading="lazy" src={stadium} alt="Stadium" className="w-[40px] h-[40px] " />,
-        link: '',
-        subcategories: 'Stadium'
-    },
-    {
-        logo: <img loading="lazy" src={petrol} alt="Petrol Pump" className="w-[40px] h-[40px] " />,
-        link: '',
-        subcategories: 'Petrol pump'
-    },
-    {
-        logo: <img loading="lazy" src={refinery} alt="Refinery" className="w-[40px] h-[40px] " />,
-        link: '',
-        subcategories: 'Refinery'
-    },
-    {
-        logo: <img loading="lazy" src={highway} alt="Highways" className="w-[40px] h-[40px] " />,
-        link: '',
-        subcategories: 'Highways'
-    },
-    {
-        logo: <img loading="lazy" src={tunnel} alt="Tunnels" className="w-[40px] h-[40px] " />,
-        link: '',
-        subcategories: 'Tunnels'
-    },
-    {
-        logo: <img loading="lazy" src={rural} alt="Rural" className="w-[40px] h-[40px] " />,
-        link: '',
-        subcategories: 'Rural, hilly & forest areas'
-    },
-    {
-        logo: <img loading="lazy" src={port} alt="Ports" className="w-[40px] h-[40px] " />,
-        link: '',
-        subcategories: 'Ports & logistic parks'
-    },
-    {
-        logo: <img loading="lazy" src={hazardous} alt="Hazardous" className="w-[40px] h-[40px] " />,
-        link: '',
-        subcategories: 'Hazardous areas'
-    },
-    {
-        logo: <img loading="lazy" src={thermal} alt="Thermal" className="w-[40px] h-[40px] " />,
-        link: '',
-        subcategories: 'Thermal power plants'
-    },
-    {
-        logo: <img loading="lazy" src={solar} alt="Solar" className="w-[40px] h-[40px] " />,
-        link: '',
-        subcategories: 'Solar parks'
-    }
-]) 
+        {
+            logo: (
+                <img
+                    loading="lazy"
+                    src={airport}
+                    alt="Airport"
+                    className="w-[40px] h-[40px] "
+                />
+            ),
+            link: '',
+            subcategories: 'Airports'
+        },
+        {
+            logo: (
+                <img
+                    loading="lazy"
+                    src={mines}
+                    alt="Mines"
+                    className="w-[40px] h-[40px] "
+                />
+            ),
+            link: '',
+            subcategories: 'Mines'
+        },
+        {
+            logo: (
+                <img
+                    loading="lazy"
+                    src={stadium}
+                    alt="Stadium"
+                    className="w-[40px] h-[40px] "
+                />
+            ),
+            link: '',
+            subcategories: 'Stadium'
+        },
+        {
+            logo: (
+                <img
+                    loading="lazy"
+                    src={petrol}
+                    alt="Petrol Pump"
+                    className="w-[40px] h-[40px] "
+                />
+            ),
+            link: '',
+            subcategories: 'Petrol pump'
+        },
+        {
+            logo: (
+                <img
+                    loading="lazy"
+                    src={refinery}
+                    alt="Refinery"
+                    className="w-[40px] h-[40px] "
+                />
+            ),
+            link: '',
+            subcategories: 'Refinery'
+        },
+        {
+            logo: (
+                <img
+                    loading="lazy"
+                    src={highway}
+                    alt="Highways"
+                    className="w-[40px] h-[40px] "
+                />
+            ),
+            link: '',
+            subcategories: 'Highways'
+        },
+        {
+            logo: (
+                <img
+                    loading="lazy"
+                    src={tunnel}
+                    alt="Tunnels"
+                    className="w-[40px] h-[40px] "
+                />
+            ),
+            link: '',
+            subcategories: 'Tunnels'
+        },
+        {
+            logo: (
+                <img
+                    loading="lazy"
+                    src={rural}
+                    alt="Rural"
+                    className="w-[40px] h-[40px] "
+                />
+            ),
+            link: '',
+            subcategories: 'Rural, hilly & forest areas'
+        },
+        {
+            logo: (
+                <img
+                    loading="lazy"
+                    src={port}
+                    alt="Ports"
+                    className="w-[40px] h-[40px] "
+                />
+            ),
+            link: '',
+            subcategories: 'Ports & logistic parks'
+        },
+        {
+            logo: (
+                <img
+                    loading="lazy"
+                    src={hazardous}
+                    alt="Hazardous"
+                    className="w-[40px] h-[40px] "
+                />
+            ),
+            link: '',
+            subcategories: 'Hazardous areas'
+        },
+        {
+            logo: (
+                <img
+                    loading="lazy"
+                    src={thermal}
+                    alt="Thermal"
+                    className="w-[40px] h-[40px] "
+                />
+            ),
+            link: '',
+            subcategories: 'Thermal power plants'
+        },
+        {
+            logo: (
+                <img
+                    loading="lazy"
+                    src={solar}
+                    alt="Solar"
+                    className="w-[40px] h-[40px] "
+                />
+            ),
+            link: '',
+            subcategories: 'Solar parks'
+        }
+    ])
 
     const [loading, setloading] = useState(true)
 
@@ -113,13 +196,16 @@ const Navbar = () => {
                             const matchingSolution = response.data.find((solution) => solution.subcategories === item.subcategories)
                             return {
                                 ...item,
-                                link: matchingSolution ? `/solutions/${matchingSolution.subcategories.replace(/\s+/g, '-')}/${matchingSolution._id}` : ''
+                                link: matchingSolution
+                                    ? `/solutions/${matchingSolution.subcategories.replace(/\s+/g, '-')}/${matchingSolution._id}`
+                                    : ''
                             }
                         })
                     })
                 }
             } catch (error) {
                 toast.error('Failed to load solutions')
+                console.error('Error fetching solutions:', error)
             } finally {
                 setloading(false)
             }
@@ -248,7 +334,7 @@ const Navbar = () => {
     return (
         <div className="w-screen  text-xl">
             <div className="bg-[var(--primary-bg-color)] p-4 px-[3vw] w-screen">
-                <div className="mx-auto flex justify-between items-center">
+                <div className="mx-auto flex justify-between  items-center">
                     <div className="flex max-lg:hidden gap-4 items-center">
                         <div className="flex items-center">
                             <CiMail className="w-5 h-5 text-white" />
@@ -263,13 +349,50 @@ const Navbar = () => {
                             <span className="text-white ml-2">+918690779778</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center justify-between md:justify-end w-full  gap-4">
                         <SearchBar />
 
-                        <div className="flex items-center ml-4">
+                        {/* <div className="flex items-center ml-4">
                             <IoEarthOutline className="w-5 h-5 text-white" />
                             <span className="text-white ml-2">IN(ENG)</span>
                             <FaCaretDown className="w-5 h-5 text-white" />
+                        </div> */}
+                        <div className="flex items-center gap-x-5 ml-4">
+                            <Link
+                                to="https://www.instagram.com/nessa.illumination?igsh=MWd2NWxxbXFrbjkyOQ=="
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white text-3xl hover:text-gray-400">
+                                <FaInstagram />
+                            </Link>
+                            <Link
+                                to="https://www.facebook.com/share/15Z3mQLR5s/?mibextid=LQQJ4d"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white text-3xl hover:text-gray-400">
+                                <RiFacebookBoxLine />
+                            </Link>
+                            <Link
+                                to="https://api.whatsapp.com/send?phone=918690779778"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white text-3xl hover:text-gray-400">
+                                <IoLogoWhatsapp />
+                            </Link>
+                            <Link
+                                to="https://www.linkedin.com/company/nessa-illumination-technologies/ "
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white text-3xl hover:text-gray-400">
+                                <CiLinkedin />
+                            </Link>
+                            <Link
+                                to="https://x.com/nessaledlights?s=21&t=SDO__KiQh-rlzCEB0xXW7g"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-white text-3xl hover:text-gray-400">
+                                <RiTwitterXFill />
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -426,7 +549,9 @@ const Navbar = () => {
                                             variants={itemVariants}
                                             initial="hidden"
                                             animate="visible">
-                                            <Link to="/calculator/battery_AH_calculator" className="w-[300px]">
+                                            <Link
+                                                to="/calculator/battery_AH_calculator"
+                                                className="w-[300px]">
                                                 <div className="flex w-full gap-[10px] mb-2 items-center hover:bg-gray-50 p-2 rounded-lg transition-colors duration-200">
                                                     {/* <div className="flex items-center justify-center text-3xl">
                                                         <FaGears className="text-[#FF881B] bg-[#FF881B] bg-opacity-30 w-[35px] h-[35px] rounded-full p-2" />
@@ -451,8 +576,6 @@ const Navbar = () => {
                                 )}
                             </AnimatePresence>
                         </div>
-
-                        
                     </div>
 
                     <div className="xl:hidden flex items-center gap-4">
@@ -603,7 +726,9 @@ const Navbar = () => {
                                             variants={itemVariants}
                                             initial="hidden"
                                             animate="visible">
-                                            <Link to="/calculator/battery_AH_calculator" className="w-[300px]">
+                                            <Link
+                                                to="/calculator/battery_AH_calculator"
+                                                className="w-[300px]">
                                                 <div className="flex w-full gap-[10px] mb-2 items-center hover:bg-gray-50 p-2 rounded-lg transition-colors duration-200">
                                                     {/* <div className="flex items-center justify-center text-3xl">
                                                         <FaGears className="text-[#FF881B] bg-[#FF881B] bg-opacity-30 w-[35px] h-[35px] rounded-full p-2" />

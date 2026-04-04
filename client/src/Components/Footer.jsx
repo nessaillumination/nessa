@@ -203,7 +203,7 @@ function Footer() {
                 </div>
 
                 <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
-                    Copyright 2025. NESSA. All Right Reserved. Developed by Futuredesks Services
+                    Copyright 2025. NESSA. All Right Reserved. Developed by NESSA ILLUMINATION TECHNOLOGIES PRIVATE LIMITED
                 </div>
             </div>
         </footer>
