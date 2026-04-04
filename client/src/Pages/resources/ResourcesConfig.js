@@ -130,7 +130,7 @@ import ncdl3 from '../../assets/images/resources/NessaCSRProfileFy26-27.pdf'
 
 import ncp1 from '../../assets/images/resources/productCatalog.png'
 import ncp2 from '../../assets/images/resources/corporateProfile.png'
-import ncp3 from '../../assets/images/resources/csr-profile.png'
+import ncp3 from '../../assets/images/resources/csr-profile-banner.png'
 
 import pmd from '../../assets/images/resources/Nessa Smart Solar Light.pdf'
 import electronic from '../../assets/images/resources/Nessa-Electronics-Catalog.pdf'
