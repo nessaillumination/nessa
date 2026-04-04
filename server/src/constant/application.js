@@ -100,7 +100,7 @@ export const ESubject = Object.freeze({
 })
 
 export const allowedUsers = Object.freeze([
-    { email: 'info@nessa.in', password: 'Nessa@ad421#ds' },
+    { email: 'info@nessa.in', password: 'Nessa@ad421#ds'},
     { email: 'Arpit.d@nessa.in', password: 'Nessa@ad124#ds' }
 ]);
 
