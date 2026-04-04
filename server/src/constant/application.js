@@ -100,8 +100,8 @@ export const ESubject = Object.freeze({
 })
 
 export const allowedUsers = Object.freeze([
-    { email: 'info@nessa.in', password: 'Nessa@Info8949' },
-    { email: 'Arpit.d@nessa.in', password: 'Nessa@Arpit8949' }
+    { email: 'info@nessa.in', password: 'Nessa@ad421#ds' },
+    { email: 'Arpit.d@nessa.in', password: 'Nessa@ad124#ds' }
 ]);
 
 export const DELETE_BY_TYPE = Object.freeze({
