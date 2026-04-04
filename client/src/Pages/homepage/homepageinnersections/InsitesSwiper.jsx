@@ -8,8 +8,9 @@ import solar from '../../../assets/images/homepageimages/solar.png'
 import street from '../../../assets/images/homepageimages/street.png'
 import whitepaper from '../../../assets/images/homepageimages/whitepaper.png'
 import { Link } from 'react-router-dom'
+import { fetchBlogs } from '../../../services/api.services'
 
-const slideData = [
+const sampleSlideData = [
     {
         image: solar,
         category: 'Blog',
@@ -50,6 +51,7 @@ const slideData = [
 
 export default function InsitesSwiper() {
     const [slidepre, setslidepre] = useState(window.innerWidth < 500 ? 1 : 3)
+    const [slideData, setSlideData] = useState(sampleSlideData)
 
     useEffect(() => {
         const handleResize = () => {
@@ -59,6 +61,33 @@ export default function InsitesSwiper() {
         window.addEventListener('resize', handleResize)
         return () => window.removeEventListener('resize', handleResize)
     }, [])
+
+    useEffect(() => {
+        const loadBlogs = async () => {
+            try {
+                const response = await fetchBlogs().then((res) =>
+                    res.data.blogs.map((blg) => ({
+                        title: blg.title,
+                        category: blg.resource_type,
+                        link: `/resources/blogs/${blg.slug}/${blg._id}`,
+                        image: blg.thumbnailImage
+                    }))
+                )
+
+                // Update each section with filtered items based on resourceType
+                // const updatedResources = resources.map((section) => ({
+                //     ...section,
+                //     items: response.data.blogs.filter((item) => item.resource_type === section.resourceType)
+                // }))
+
+                setSlideData(response)
+            } catch (error) {
+                console.error('Blog fetch failed')
+            } 
+        }
+        loadBlogs()
+    }, [])
+
 
     return (
         <Swiper
@@ -78,7 +107,6 @@ export default function InsitesSwiper() {
                 waitForTransition: true,
                 enabled: true // Changed to true since we're managing it manually
             }}
-           
             modules={[Pagination, Autoplay, Navigation]}
             className="mySwiper"
             style={{ paddingLeft: '50px', paddingRight: '50px', height: '100%' }}>
@@ -86,17 +114,17 @@ export default function InsitesSwiper() {
                 <SwiperSlide
                     key={index}
                     className="mb-[50px]">
-                    <div className="slide-content flex flex-col gap-4">
+                    <div className="slide-content flex flex-col max-w-96 gap-4">
                         <img
-                            className="rounded-xl"
+                            className="rounded-xl max-h-52"
                             loading="lazy"
                             src={slide.image}
                             alt={slide.title}
                         />
                         <div className="slide-text flex flex-col gap-2">
                             <h4>{slide.category}</h4>
-                            <h3 className="font-bold">{slide.title}</h3>
-                            <Link href="#">{slide.link}</Link>
+                            <h3 className="font-bold text-sm">{slide.title}</h3>
+                            <Link to={slide.link} title={`${window.location.origin}${slide.link}`} className='underline-offset-4 text-blue-600 underline '>read more</Link>
                         </div>
                     </div>
                 </SwiperSlide>
