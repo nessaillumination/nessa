@@ -124,18 +124,20 @@ export const media = [
 
 
 
-import ncdl1 from '../../assets/images/resources/nessaCatalog.pdf'
-import ncdl2 from '../../assets/images/resources/csr.pdf'
-import ncdl3 from '../../assets/images/resources/compony.pdf'
+import ncdl1 from '../../assets/images/resources/NessaProductCatalogueFy26-27.pdf'
+import ncdl2 from '../../assets/images/resources/NessaCorporateProfileFy26-27.pdf'
+import ncdl3 from '../../assets/images/resources/NessaCSRProfileFy26-27.pdf'
 
-import ncp1 from '../../assets/images/resources/nessacatalog.png'
-import ncp2 from '../../assets/images/resources/csrprofile.png'
-import ncp3 from '../../assets/images/resources/componyprofile.png'
+import ncp1 from '../../assets/images/resources/productCatalog.png'
+import ncp2 from '../../assets/images/resources/corporateProfile.png'
+import ncp3 from '../../assets/images/resources/csr-profile.png'
 
 import pmd from '../../assets/images/resources/Nessa Smart Solar Light.pdf'
 import electronic from '../../assets/images/resources/Nessa-Electronics-Catalog.pdf'
 import solar from '../../assets/images/resourcesImages/NESSA-SMART-SOLAR-LIGHTS.jpg'
-import Electronics from '../../assets/images/resourcesImages/ele.jpg'
+import Electronics from '../../assets/images/resources/Electronics.png'
+import HighMast from '../../assets/images/resources/HighMast.png'
+// import HighMastPdf from '../../assets/images/resources/Nessa-High-Mast-Catalog.pdf'
 
  export const resourcesUtilsConfigHardCodedData = {
      title: 'Resources Page Utils Data',
@@ -144,18 +146,30 @@ import Electronics from '../../assets/images/resourcesImages/ele.jpg'
              {
                  poster: ncp1,
                  downloadLink: ncdl1,
-                 name: 'Nessa  Catalog'
+                 name: 'Product  Catalog'
              },
              {
                  poster: ncp2,
                  downloadLink: ncdl2,
-                 name: 'Nessa CSR Profile'
+                 name: 'corporate Profile'
              },
              {
                  poster: ncp3,
                  downloadLink: ncdl3,
-                 name: 'Nessa Profiie'
-             }
+                 name: 'Nessa CSR Profiie'
+             },
+             {
+                 poster: Electronics,
+                 downloadLink: electronic,
+                 name: 'Electronics',
+                 description: ''
+             },
+             {
+                 poster: HighMast,
+                 downloadLink: null,
+                 name: 'High Mast',
+                 description: ''
+             },
          ],
          productManualUtilsData: [
              {

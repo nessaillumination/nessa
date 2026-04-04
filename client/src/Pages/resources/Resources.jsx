@@ -1,6 +1,6 @@
 import { Link, Outlet, useLocation } from 'react-router-dom'
 // import Media from './Media'
-import resourceshero from '../../assets/images/resources/resourceshero.jpg'
+import resourceshero from '../../assets/images/resources/ResourceBanner.png'
 import Navbar from '../../Components/Header/Navbar'
 import SideComponent from '../../Components/sideComponent/SideComponent'
 import Footer from '../../Components/Footer'
@@ -89,14 +89,14 @@ export const Resources = () => {
                     background: 'linear-gradient(to bottom, #f7faff, #deeefc)'
                 }}
                 className="py-[50px] ">
-                <div className=" text-4xl font-semibold leading-snug text-center text-black z-[2] relative">
+                {/* <div className=" text-4xl font-semibold leading-snug text-center text-black z-[2] relative">
                     Product
                     <span className="text-blue-500">  Manuals</span>
-                </div>
-                <div className="w-full flex justify-center">
+                </div> */}
+                {/* <div className="w-full flex justify-center">
                     <div className="flex relative shrink-0 mt-9 h-2.5 bg-[#b3d6f6] rounded-[50px] w-[51px]" />
-                </div>
-                <div className="grid grid-cols-4 max-[1000px]:grid-cols-3  max-md:grid-cols-2 max-sm:grid-cols-1 w-full justify-items-center px-[5vw] mt-[50px] ">
+                </div> */}
+                <div className="grid grid-cols-4 max-[1000px]:grid-cols-3  max-md:grid-cols-2 max-sm:grid-cols-1 w-full justify-items-center px-[5vw] mt-[10px] ">
                     {productManual.map((item, index) => (
                         <div
                             key={index}
