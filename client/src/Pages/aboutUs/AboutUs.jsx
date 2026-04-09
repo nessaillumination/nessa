@@ -9,7 +9,7 @@ import customersegment from '../../assets/images/aboutUs/customersegment.svg'
 import Navbar from '../../Components/Header/Navbar'
 import SideComponent from '../../Components/sideComponent/SideComponent'
 import { AnimatePresence, motion } from 'framer-motion'
-import {  useState } from 'react'
+import { useState } from 'react'
 import PartnersReviewsSwiper from '../../Components/partnerreviews/PartnersReviewsSwiper'
 import Footer from '../../Components/Footer'
 import TeamSwiper from './TeamSwiper'
@@ -17,10 +17,9 @@ import InvestorSwiper from './InvestorSwiper'
 import SEO from '../../helper/Seo'
 
 const AboutUs = () => {
-
     const whyChooseNessaBoxData = [
         {
-            title:  `${new Date().getFullYear() - 2008}+ Years of Expertise`,
+            title: `${new Date().getFullYear() - 2008}+ Years of Expertise`,
             description: 'Every Nessa product is designed and manufactured at our state-of-the-art facility in Ahmedabad, spanning 17,000 sq. ft.'
         },
         {
@@ -73,14 +72,21 @@ const AboutUs = () => {
         )
     }
 
-
     return (
         <>
             <SEO
-                title={"About Nessa | LED & Solar Lighting Company in India | Nessa"}
-                ogTitle={"About Nessa | LED & Solar Lighting Company in India | Nessa"}
-                description={"Learn about Nessa, a leading LED and solar lighting company in India. Providing energy-efficient lighting solutions for industrial, commercial, and public projects."}
-                primaryKeyword={["led lighting company india", "about led lighting company", "solar lighting company india", "energy efficient lighting company", "lighting solutions company"]}
+                title={'About Nessa | LED & Solar Lighting Company in India | Nessa'}
+                ogTitle={'About Nessa | LED & Solar Lighting Company in India | Nessa'}
+                description={
+                    'Learn about Nessa, a leading LED and solar lighting company in India. Providing energy-efficient lighting solutions for industrial, commercial, and public projects.'
+                }
+                primaryKeyword={[
+                    'led lighting company india',
+                    'about led lighting company',
+                    'solar lighting company india',
+                    'energy efficient lighting company',
+                    'lighting solutions company'
+                ]}
             />
             <div className="w-full overflow-hidden">
                 <Navbar />
@@ -143,17 +149,17 @@ const AboutUs = () => {
                         <div className="relative mt-7 text-xl px-[5vw] mb-4 leading-8 text-justify text-zinc-900 max-md:max-w-full">
                             Nessa Illumination Technologies Private Limited is a leader in the LED lighting industry, renowned for its expertise in
                             delivering advanced technical lighting solutions. Our <strong>state-of-the-art technology</strong> is developed at the
-                            in-house <strong>NESSA Technology & Innovation Centre (R&D Centre)</strong> in Ahmedabad.
-                            Our products have received approvals from multiple <strong>Public Sector Units (PSUs) across India</strong>, underscoring our
-                            commitment to <strong>quality and innovation</strong>. Nessa’s luminaires are meticulously designed and manufactured in our{' '}
+                            in-house <strong>NESSA Technology & Innovation Centre (R&D Centre)</strong> in Ahmedabad. Our products have received
+                            approvals from multiple <strong>Public Sector Units (PSUs) across India</strong>, underscoring our commitment to{' '}
+                            <strong>quality and innovation</strong>. Nessa’s luminaires are meticulously designed and manufactured in our{' '}
                             <strong>ultra-modern production facilities</strong>, ensuring the highest standards of excellence.
                         </div>
                         <div className="relative mt-7 text-xl px-[5vw] mb-4 leading-8 text-justify text-zinc-900 max-md:max-w-full">
-                            We are rapidly establishing our presence in the LED industry with our <strong>cutting-edge lighting solutions</strong>. Our
-                            professional lighting portfolio spans{' '}
+                            We are rapidly establishing our presence in the LED industry with our <strong>cutting-edge lighting solutions</strong>.
+                            Our professional lighting portfolio spans{' '}
                             <strong>indoor, street, industrial, landscape, and architectural lighting applications</strong>. We also provide{' '}
-                            <strong>customized LED lighting solutions</strong> for various fixtures, tailored to meet diverse requirements.
-                            With <strong>strategic collaborations</strong> with intelligent system integrators, Nessa has the expertise to{' '}
+                            <strong>customized LED lighting solutions</strong> for various fixtures, tailored to meet diverse requirements. With{' '}
+                            <strong>strategic collaborations</strong> with intelligent system integrators, Nessa has the expertise to{' '}
                             <strong>
                                 design advanced illumination systems, implement intelligent lighting installations, and enable remote monitoring and
                                 dimming functionalities
@@ -162,11 +168,11 @@ const AboutUs = () => {
                         </div>
                         <div className="relative mt-7 text-xl px-[5vw] mb-4 leading-8 text-justify text-zinc-900 max-md:max-w-full">
                             Our latest range of luminaires aligns with the principles of{' '}
-                            <strong>"energy conservation," "environmental sustainability," and "enhanced value for money."</strong> At Nessa Illumination
-                            Technologies, we believe that{' '}
-                            <strong>superior products with innovative technology can create a brighter, more sustainable world</strong>. Our commitment to{' '}
-                            <strong>innovation, quality, and sustainability</strong> drives us to continuously enhance our offerings, ensuring we meet the
-                            evolving needs of our customers.
+                            <strong>"energy conservation," "environmental sustainability," and "enhanced value for money."</strong> At Nessa
+                            Illumination Technologies, we believe that{' '}
+                            <strong>superior products with innovative technology can create a brighter, more sustainable world</strong>. Our
+                            commitment to <strong>innovation, quality, and sustainability</strong> drives us to continuously enhance our offerings,
+                            ensuring we meet the evolving needs of our customers.
                             <strong>Explore our range and experience how Nessa’s smart lighting solutions can transform your environment.</strong>
                         </div>
                     </div>
@@ -207,7 +213,7 @@ const AboutUs = () => {
                             Our
                             <span className="text-blue-500"> Mission</span>
                         </h1>
-                        <h1 className="px-[50px]"> To work as a team innovatively and dedicatedly to create safe & reliable products and services.</h1>
+                        <h1 className="px-[50px]">Empowering Lives Through Illumination for a Greener Tomorrow.</h1>
                     </div>
                 </div>
 
@@ -320,8 +326,9 @@ const AboutUs = () => {
                     <div className=" px-[5vw] text-xl flex items-center justify-center text-black z-[2] relative">
                         <h1>
                             {' '}
-                            To be World Class supplier of <span className="text-blue-500"> LED Lights, Solar LED Lights and Drivers, </span> which meet
-                            the Customer’s expectations through Teamwork and continuous <span className="text-blue-500">Improvement and Innovation.</span>{' '}
+                            To be World Class supplier of <span className="text-blue-500"> LED Lights, Solar LED Lights and Drivers, </span> which
+                            meet the Customer’s expectations through Teamwork and continuous{' '}
+                            <span className="text-blue-500">Improvement and Innovation.</span>{' '}
                         </h1>
                     </div>
                 </div>
