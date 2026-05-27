@@ -16,7 +16,6 @@ import TeamSwiper from './TeamSwiper'
 import InvestorSwiper from './InvestorSwiper'
 import SEO from '../../helper/Seo'
 import BoardOfDirectors from './BoardOfDirectors'
-import TeamSection from './TeamSection'
 
 const AboutUs = () => {
     const whyChooseNessaBoxData = [
@@ -278,9 +277,9 @@ const AboutUs = () => {
 
                         <div className="w-24 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div>
 
-                        <p className="text-gray-500 mt-5 max-w-2xl mx-auto leading-relaxed">
+                        {/* <p className="text-gray-500 mt-5 max-w-2xl mx-auto leading-relaxed">
                             Meet the experienced professionals leading our vision, innovation, and growth with dedication and excellence.
-                        </p>
+                        </p> */}
                     </div>
 
                     <TeamSwiper />
