@@ -65,7 +65,7 @@ import arpit from '../../assets/images/aboutUs/team/arpit.jpeg'
 import devgan from '../../assets/images/aboutUs/team/devgan.jpeg'
 import tejas from '../../assets/images/aboutUs/team/tejas.jpg'
 import octavian from '../../assets/images/aboutUs/team/octavian.jpg'
-import Hasmukh from '../../assets/images/aboutUs/team/no_image.jpg'
+
 
 export const boardOfDirectors = [
     // {
