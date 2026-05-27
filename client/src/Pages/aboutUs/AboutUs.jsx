@@ -1,4 +1,4 @@
-import { nessaEdgeItems, whoWeAre } from './AboutUsConfig'
+import { boardOfDirectors, nessaEdgeItems, whoWeAre } from './AboutUsConfig'
 import { RiLightbulbFlashLine } from 'react-icons/ri'
 import ProductAndTestingSwiper from './ProductAndTestingSwiper'
 import CertificatesSwiper from './CertificatesSwiper'
@@ -15,6 +15,8 @@ import Footer from '../../Components/Footer'
 import TeamSwiper from './TeamSwiper'
 import InvestorSwiper from './InvestorSwiper'
 import SEO from '../../helper/Seo'
+import BoardOfDirectors from './BoardOfDirectors'
+import TeamSection from './TeamSection'
 
 const AboutUs = () => {
     const whyChooseNessaBoxData = [
@@ -261,15 +263,28 @@ const AboutUs = () => {
                 </div>
 
                 <div className="w-full py-[50px]">
-                    <div className=" text-4xl font-semibold leading-snug text-center text-black z-[2] relative">
+                    <BoardOfDirectors directors={boardOfDirectors} />
+                    {/* <div className=" text-4xl font-semibold leading-snug mt-12 text-center text-black z-[2] relative">
                         Our Team
                         <span className="text-blue-500"> &</span> Advisor
                     </div>
                     <div className="w-full flex justify-center mb-5">
                         <div className="flex relative shrink-0 mt-9 h-2.5 bg-[#b3d6f6] rounded-[50px] w-[51px]" />
+                    </div> */}
+
+                    {/* Heading */}
+                    <div className="text-center mb-8">
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Our Leadership Team</h2>
+
+                        <div className="w-24 h-1 bg-orange-500 mx-auto mt-4 rounded-full"></div>
+
+                        <p className="text-gray-500 mt-5 max-w-2xl mx-auto leading-relaxed">
+                            Meet the experienced professionals leading our vision, innovation, and growth with dedication and excellence.
+                        </p>
                     </div>
 
                     <TeamSwiper />
+                    {/* <TeamSection/> */}
 
                     <InvestorSwiper />
                 </div>

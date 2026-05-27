@@ -357,7 +357,7 @@ const Navbar = () => {
                             <span className="text-white ml-2">IN(ENG)</span>
                             <FaCaretDown className="w-5 h-5 text-white" />
                         </div> */}
-                        <div className="flex items-center gap-x-5 ml-4">
+                        <div className="flex items-center gap-x-2 md:gap-x-5 ml-4">
                             <Link
                                 to="https://www.instagram.com/nessa.illumination?igsh=MWd2NWxxbXFrbjkyOQ=="
                                 target="_blank"

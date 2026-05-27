@@ -4,9 +4,8 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-import { Pagination, Navigation ,Autoplay} from 'swiper/modules'
+import { Pagination, Navigation, Autoplay } from 'swiper/modules'
 import { team } from './AboutUsConfig'
-
 
 export default function TeamSwiper() {
     return (
@@ -19,10 +18,11 @@ export default function TeamSwiper() {
                     dynamicBullets: true,
                     dynamicMainBullets: 3
                 }}
-                // autoplay={{
-                //     delay: 2500,
-                //     pauseOnMouseEnter: true
-                // }}
+                loop={true}
+                autoplay={{
+                    delay: 2500,
+                    pauseOnMouseEnter: true
+                }}
                 breakpoints={{
                     550: {
                         slidesPerView: 2,
@@ -44,22 +44,35 @@ export default function TeamSwiper() {
                 navigation={{
                     clickable: true
                 }}
-                modules={[Pagination, Navigation ,Autoplay]}
+                modules={[Pagination, Navigation, Autoplay]}
                 className="mySwiper  mt-[50px] select-none">
                 {team.length > 0 ? (
                     team.map((item, index) => (
                         <SwiperSlide
                             key={index}
                             className="mb-[50px] select-none">
-                            <div className="flex flex-col  items-center text-center">
-                                <img
-                                    className="rounded-xl h-[350px]  w-[300px] object-contain border  bg-[#e7f2fd] border-orange-400 overflow-hidden "
-                                    src={item.image}
-                                    loading="lazy"
-                                    alt=""
-                                />
-                                <h1 className="font-semibold text-xl mt-5">{item.name}</h1>
-                                <h1 className="opacity-70 mt-1"> {item.position}</h1>
+                            <div
+                                key={index}
+                                className="group max-w-[450px] bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500">
+                                {/* Image Container */}
+                                <div className="relative overflow-hidden bg-white p-6">
+                                    <img
+                                        className="w-full h-[340px] object-contain rounded-2xl transition-transform duration-500 group-hover:scale-105"
+                                        src={item.image}
+                                        loading="lazy"
+                                        alt={item.name}
+                                    />
+                                </div>
+
+                                {/* Content */}
+                                <div className="px-6 py-7 text-center">
+                                    <h3 className="text-2xl font-semibold text-gray-900">{item.name}</h3>
+
+                                    <p className="text-gray-500 mt-2 text-sm md:text-base leading-relaxed">{item.position}</p>
+
+                                    {/* Bottom Accent */}
+                                    <div className="w-12 h-1 bg-orange-500 mx-auto mt-5 rounded-full"></div>
+                                </div>
                             </div>
                         </SwiperSlide>
                     ))
