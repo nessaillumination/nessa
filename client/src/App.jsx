@@ -1,29 +1,29 @@
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom'
 // import { useEffect } from 'react';
-import { Toaster } from 'react-hot-toast';
-import WelcomePage from './Pages/Welcome/WelcomePage';
-import Homepage from './Pages/homepage/Homepage';
-import Solutions from './Pages/solutions/Solutions';
-import SolutionDetail from './Pages/solutionDetail/SolutionDetail';
-import Terms from './Pages/terms/Terms';
-import ContactUs from './Pages/contactUs/ContactUs';
-import EsgPolicy from './Pages/esgpolicy/EsgPolicy';
-import PrivacyPolicy from './Pages/privacy1/Privacy1';
-import Support from './Pages/support/Support';
-import { Resources } from './Pages/resources/Resources';
-import AllProducts from './Pages/allproducts/Allproducts';
-import Product from './Pages/product/Product';
-import AboutUs from './Pages/aboutUs/AboutUs';
-import ScrollToTop from './Components/ScrollToTop';
-import { Projects } from './Pages/projects/Projects';
-import { ValueAddedServices } from './Pages/valueAddedServices/ValueAddedServices';
-import CookiesPolicy from './Pages/CookiesPolicy/CookiesPolicy';
-import BlogDetailPage from './Pages/blogDetail/BlogDetailPage';
-import CookieConsent from './hooks/CookieConsent';
-import BatteryAHcalculator from './Pages/calculators/BatteryAHcalculator';
-import MaintenancePage from './Pages/Maintenance/MaintenancePage';
+import { Toaster } from 'react-hot-toast'
+import WelcomePage from './Pages/Welcome/WelcomePage'
+import Homepage from './Pages/homepage/Homepage'
+import Solutions from './Pages/solutions/Solutions'
+import SolutionDetail from './Pages/solutionDetail/SolutionDetail'
+import Terms from './Pages/terms/Terms'
+import ContactUs from './Pages/contactUs/ContactUs'
+import EsgPolicy from './Pages/esgpolicy/EsgPolicy'
+import PrivacyPolicy from './Pages/privacy1/Privacy1'
+import Support from './Pages/support/Support'
+import { Resources } from './Pages/resources/Resources'
+import AllProducts from './Pages/allproducts/Allproducts'
+import Product from './Pages/product/Product'
+import AboutUs from './Pages/aboutUs/AboutUs'
+import ScrollToTop from './Components/ScrollToTop'
+import { Projects } from './Pages/projects/Projects'
+import { ValueAddedServices } from './Pages/valueAddedServices/ValueAddedServices'
+import CookiesPolicy from './Pages/CookiesPolicy/CookiesPolicy'
+import BlogDetailPage from './Pages/blogDetail/BlogDetailPage'
+import CookieConsent from './hooks/CookieConsent'
+import BatteryAHcalculator from './Pages/calculators/BatteryAHcalculator'
+import MaintenancePage from './Pages/Maintenance/MaintenancePage'
 
-const MAINTENANCE_MODE = false;
+const MAINTENANCE_MODE = false
 
 // const pageMetaData = {
 //     '/': {
@@ -113,88 +113,145 @@ const MAINTENANCE_MODE = false;
 //   }
 
 const App = () => {
-  // const location = useLocation();
+    // const location = useLocation();
 
-  // useEffect(() => {
-  //   // Get meta data for the current route
-  //   const meta = pageMetaData[location.pathname] || {
-  //     title: 'Nessa',
-  //     ogTitle: 'Nessa: Innovative Lighting and Solar Solutions',
-  //     description: 'Nessa - Innovative solutions for a better future.',
-  //     keywords: 'Nessa, solutions, technology',
-  //   };
+    // useEffect(() => {
+    //   // Get meta data for the current route
+    //   const meta = pageMetaData[location.pathname] || {
+    //     title: 'Nessa',
+    //     ogTitle: 'Nessa: Innovative Lighting and Solar Solutions',
+    //     description: 'Nessa - Innovative solutions for a better future.',
+    //     keywords: 'Nessa, solutions, technology',
+    //   };
 
-  //   // Set document title
-  //   document.title = meta.ogTitle;
+    //   // Set document title
+    //   document.title = meta.ogTitle;
 
-  //   // Set meta description
-  //   let metaDescription = document.querySelector('meta[name="description"]');
-  //   if (!metaDescription) {
-  //     metaDescription = document.createElement('meta');
-  //     metaDescription.name = 'description';
-  //     document.head.appendChild(metaDescription);
-  //   }
-  //   metaDescription.content = meta.description;
+    //   // Set meta description
+    //   let metaDescription = document.querySelector('meta[name="description"]');
+    //   if (!metaDescription) {
+    //     metaDescription = document.createElement('meta');
+    //     metaDescription.name = 'description';
+    //     document.head.appendChild(metaDescription);
+    //   }
+    //   metaDescription.content = meta.description;
 
-  //   // Set meta keywords
-  //   let metaKeywords = document.querySelector('meta[name="keywords"]');
-  //   if (!metaKeywords) {
-  //     metaKeywords = document.createElement('meta');
-  //     metaKeywords.name = 'keywords';
-  //     document.head.appendChild(metaKeywords);
-  //   }
-  //   metaKeywords.content = meta.keywords;
+    //   // Set meta keywords
+    //   let metaKeywords = document.querySelector('meta[name="keywords"]');
+    //   if (!metaKeywords) {
+    //     metaKeywords = document.createElement('meta');
+    //     metaKeywords.name = 'keywords';
+    //     document.head.appendChild(metaKeywords);
+    //   }
+    //   metaKeywords.content = meta.keywords;
 
-  //   // Set Open Graph title
-  //   let ogTitle = document.querySelector('meta[property="og:title"]');
-  //   if (!ogTitle) {
-  //     ogTitle = document.createElement('meta');
-  //     ogTitle.setAttribute('property', 'og:title');
-  //     document.head.appendChild(ogTitle);
-  //   }
-  //   ogTitle.content = meta.ogTitle;
+    //   // Set Open Graph title
+    //   let ogTitle = document.querySelector('meta[property="og:title"]');
+    //   if (!ogTitle) {
+    //     ogTitle = document.createElement('meta');
+    //     ogTitle.setAttribute('property', 'og:title');
+    //     document.head.appendChild(ogTitle);
+    //   }
+    //   ogTitle.content = meta.ogTitle;
 
-  //   // Cleanup (optional)
-  //   return () => {
-  //     // Reset to default or leave as is
-  //   };
-  // }, [location.pathname]); // Run when the pathname changes
+    //   // Cleanup (optional)
+    //   return () => {
+    //     // Reset to default or leave as is
+    //   };
+    // }, [location.pathname]); // Run when the pathname changes
+    console.log('working fine ')
+    if (MAINTENANCE_MODE) {
+        return (
+            <Routes>
+                <Route
+                    path="*"
+                    element={<MaintenancePage />}
+                />
+            </Routes>
+        )
+    }
 
-  if (MAINTENANCE_MODE) {
     return (
-      <Routes>
-        <Route path="*" element={<MaintenancePage />} />
-      </Routes>
-    );
-  }
+        <>
+            <Toaster reverseOrder={false} />
+            <ScrollToTop />
+            <CookieConsent />
+            <Routes>
+                <Route
+                    path="/welcome"
+                    element={<WelcomePage />}
+                />
+                <Route
+                    path="/"
+                    element={<Homepage />}
+                />
+                <Route
+                    path="/solutions"
+                    element={<Solutions />}
+                />
+                <Route
+                    path="/solutions/:title/:id"
+                    element={<SolutionDetail />}
+                />
+                <Route
+                    path="/terms"
+                    element={<Terms />}
+                />
+                <Route
+                    path="/privacy"
+                    element={<PrivacyPolicy />}
+                />
+                <Route
+                    path="/esgpolicy"
+                    element={<EsgPolicy />}
+                />
+                <Route
+                    path="/cookiespolicy"
+                    element={<CookiesPolicy />}
+                />
+                <Route
+                    path="/contactus"
+                    element={<ContactUs />}
+                />
+                <Route
+                    path="/aboutus"
+                    element={<AboutUs />}
+                />
+                <Route
+                    path="/support"
+                    element={<Support />}
+                />
+                <Route
+                    path="/allproducts"
+                    element={<AllProducts />}
+                />
+                <Route
+                    path="/product/:slug/:id"
+                    element={<Product />}
+                />
+                <Route
+                    path="/projects"
+                    element={<Projects />}
+                />
+                <Route
+                    path="/valueAddedServices"
+                    element={<ValueAddedServices />}
+                />
+                <Route
+                    path="/resources"
+                    element={<Resources />}
+                />
+                <Route
+                    path="/resources/:resource_type/:slug/:id"
+                    element={<BlogDetailPage />}
+                />
+                <Route
+                    path="/calculator/battery_AH_calculator"
+                    element={<BatteryAHcalculator />}
+                />
+            </Routes>
+        </>
+    )
+}
 
-  return (
-    <>
-      <Toaster reverseOrder={false} />
-      <ScrollToTop />
-      <CookieConsent />
-      <Routes>
-        <Route path="/welcome" element={<WelcomePage />} />
-        <Route path="/" element={<Homepage />} />
-        <Route path="/solutions" element={<Solutions />} />
-        <Route path="/solutions/:title/:id" element={<SolutionDetail />} />
-        <Route path="/terms" element={<Terms />} />
-        <Route path="/privacy" element={<PrivacyPolicy />} />
-        <Route path="/esgpolicy" element={<EsgPolicy />} />
-        <Route path="/cookiespolicy" element={<CookiesPolicy />} />
-        <Route path="/contactus" element={<ContactUs />} />
-        <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/support" element={<Support />} />
-        <Route path="/allproducts" element={<AllProducts />} />
-        <Route path="/product/:slug/:id" element={<Product />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/valueAddedServices" element={<ValueAddedServices />} />
-        <Route path="/resources" element={<Resources />} />
-        <Route path="/resources/:resource_type/:slug/:id" element={<BlogDetailPage />} />
-        <Route path="/calculator/battery_AH_calculator" element={<BatteryAHcalculator />} />
-      </Routes>
-    </>
-  );
-};
-
-export default App;
+export default App
