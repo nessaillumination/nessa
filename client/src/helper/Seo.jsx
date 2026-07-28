@@ -266,18 +266,18 @@ keywords : ["solar park lighting","solar high mast lighting","smart solar lights
     ],
   },
 
-  slug67a061a8b15bde2d27dddf2f: {
-    title: "200W LED Street Light | Energy Efficient Street Lighting | Nessa",
-    description:
-      "Shop 200 watt LED street lights for energy-efficient outdoor lighting. Nessa’s 200W LED and solar street lighting suits roads, highways, and industrial areas.",
-    keywords: [
-      "led street light 200w",
-      "200 watt led street light",
-      "solar street light 200w",
-      "energy efficient street light",
-      "led street lighting",
-    ],
-  },
+  // slug67a061a8b15bde2d27dddf2f: {
+  //   title: "200W LED Street Light | Energy Efficient Street Lighting | Nessa",
+  //   description:
+  //     "Shop 200 watt LED street lights for energy-efficient outdoor lighting. Nessa’s 200W LED and solar street lighting suits roads, highways, and industrial areas.",
+  //   keywords: [
+  //     "led street light 200w",
+  //     "200 watt led street light",
+  //     "solar street light 200w",
+  //     "energy efficient street light",
+  //     "led street lighting",
+  //   ],
+  // },
 
   slug67a06385b15bde2d27dddf4c: {
     title: "250W LED Street Light | Energy Efficient Outdoor Lighting | Nessa",
@@ -332,18 +332,18 @@ keywords : ["solar park lighting","solar high mast lighting","smart solar lights
   },
 
 
-  slug67a06b67b15bde2d27dde131: {
-    title: "75W LED Flood Light | Energy Efficient Outdoor Lighting | Nessa",
-    description:
-      "Shop 75 watt LED flood lights for energy-efficient outdoor lighting. Nessa’s 75W LED flood lighting offers bright, durable illumination for outdoor spaces.",
-    keywords: [
-      "led flood light 75w",
-      "75 watt led flood light",
-      "outdoor led flood lights",
-      "energy efficient flood lights",
-      "led flood lighting",
-    ],
-  },
+  // slug67a06b67b15bde2d27dde131: {
+  //   title: "75W LED Flood Light | Energy Efficient Outdoor Lighting | Nessa",
+  //   description:
+  //     "Shop 75 watt LED flood lights for energy-efficient outdoor lighting. Nessa’s 75W LED flood lighting offers bright, durable illumination for outdoor spaces.",
+  //   keywords: [
+  //     "led flood light 75w",
+  //     "75 watt led flood light",
+  //     "outdoor led flood lights",
+  //     "energy efficient flood lights",
+  //     "led flood lighting",
+  //   ],
+  // },
 
   slug67a06de88b7ec7560fa0aa75: {
     title: "100W LED Flood Light | Energy Efficient Outdoor Lighting | Nessa",
@@ -427,18 +427,18 @@ keywords : ["solar park lighting","solar high mast lighting","smart solar lights
     ],
   },
 
-  slug67a095be8b7ec7560fa0e4ba: {
-    title: "300W LED Floodlight | High Lumen Outdoor Waterproof Light | Nessa",
-    description:
-      "Shop 300W LED floodlights for high lumen, waterproof outdoor lighting. Nessa’s industrial LED floodlights deliver bright, energy-efficient illumination for large areas.",
-    keywords: [
-      "LED Floodlight",
-      "Outdoor LED Floodlight",
-      "Waterproof LED Floodlight",
-      "High Lumen LED Floodlight",
-      "Industrial LED Floodlight",
-    ],
-  },
+  // slug67a095be8b7ec7560fa0e4ba: {
+  //   title: "300W LED Floodlight | High Lumen Outdoor Waterproof Light | Nessa",
+  //   description:
+  //     "Shop 300W LED floodlights for high lumen, waterproof outdoor lighting. Nessa’s industrial LED floodlights deliver bright, energy-efficient illumination for large areas.",
+  //   keywords: [
+  //     "LED Floodlight",
+  //     "Outdoor LED Floodlight",
+  //     "Waterproof LED Floodlight",
+  //     "High Lumen LED Floodlight",
+  //     "Industrial LED Floodlight",
+  //   ],
+  // },
 
   slug67a0984b8b7ec7560fa0e4db: {
     title: "350W LED Floodlight | Industrial Outdoor Waterproof Lighting | Nessa",
@@ -466,18 +466,18 @@ keywords : ["solar park lighting","solar high mast lighting","smart solar lights
     ],
   },
 
-  slug67a09ae88b7ec7560fa0e4f6: {
-    title: "400W LED Floodlight | Industrial Outdoor Waterproof Lighting | Nessa",
-    description:
-      "Shop 400W LED floodlights for high lumen, waterproof outdoor lighting. Nessa’s industrial LED floodlights deliver bright, energy-efficient illumination for large areas.",
-    keywords: [
-      "LED Floodlight",
-      "Outdoor LED Floodlight",
-      "Waterproof LED Floodlight",
-      "High Lumen LED Floodlight",
-      "Industrial LED Floodlight",
-    ],
-  },
+  // slug67a09ae88b7ec7560fa0e4f6: {
+  //   title: "400W LED Floodlight | Industrial Outdoor Waterproof Lighting | Nessa",
+  //   description:
+  //     "Shop 400W LED floodlights for high lumen, waterproof outdoor lighting. Nessa’s industrial LED floodlights deliver bright, energy-efficient illumination for large areas.",
+  //   keywords: [
+  //     "LED Floodlight",
+  //     "Outdoor LED Floodlight",
+  //     "Waterproof LED Floodlight",
+  //     "High Lumen LED Floodlight",
+  //     "Industrial LED Floodlight",
+  //   ],
+  // },
 
   slug67a09ccf8b7ec7560fa0e511: {
     title: "500W LED Floodlight | Outdoor IP65 High Power Lighting | Nessa",
