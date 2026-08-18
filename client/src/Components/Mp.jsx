@@ -98,7 +98,7 @@ const Mp = () => {
         })
         path.style.fill = '#0074E0'
     }
-console.log("working fine")
+
     return (
         <div className="w-full  flex max-md:flex-col px-[5vw] ">
             <svg
